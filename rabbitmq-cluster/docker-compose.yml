@@ -1,0 +1,102 @@
+x-rabbitmq: &rabbitmq
+  image: rabbitmq:4-management
+  command: >
+    sh -c "rabbitmq-plugins enable --offline rabbitmq_prometheus && exec rabbitmq-server"
+  networks:
+    - rabbitnet
+  healthcheck:
+    test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+    interval: 10s
+    timeout: 5s
+    retries: 10
+
+services:
+  rabbit1:
+    <<: *rabbitmq
+    container_name: rabbit1
+    hostname: rabbit1
+    environment:
+      RABBITMQ_NODENAME: rabbit@rabbit1
+      RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbit1_data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+
+  rabbit2:
+    <<: *rabbitmq
+    container_name: rabbit2
+    hostname: rabbit2
+    environment:
+      RABBITMQ_NODENAME: rabbit@rabbit2
+      RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+    volumes:
+      - rabbit2_data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+    depends_on:
+      rabbit1:
+        condition: service_healthy
+
+  rabbit3:
+    <<: *rabbitmq
+    container_name: rabbit3
+    hostname: rabbit3
+    environment:
+      RABBITMQ_NODENAME: rabbit@rabbit3
+      RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
+    ports:
+      - "5674:5672"
+      - "15674:15672"
+    volumes:
+      - rabbit3_data:/var/lib/rabbitmq
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+    depends_on:
+      rabbit2:
+        condition: service_healthy
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    networks:
+      - rabbitnet
+    depends_on:
+      rabbit1:
+        condition: service_healthy
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    networks:
+      - rabbitnet
+    depends_on:
+      - prometheus
+
+networks:
+  rabbitnet:
+    driver: bridge
+
+volumes:
+  rabbit1_data:
+  rabbit2_data:
+  rabbit3_data:
+  prometheus_data:
+  grafana_data:
