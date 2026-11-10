@@ -2,80 +2,103 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"time"
 
 	amqp "github.com/rabbitmq/amqp091-go"
 )
 
-func main() {
-	// Connect to RabbitMQ
-	conn, err := amqp.Dial("amqp://admin:admin@localhost:5673/")
+var nodes = []string{
+	"amqp://admin:admin@localhost:5673/", // Node 2: primary
+	"amqp://admin:admin@localhost:5674/", // Node 3: fallback
+}
+
+func consumeFrom(url string) error {
+	log.Printf("Connecting to %s", url)
+
+	conn, err := amqp.Dial(url)
 	if err != nil {
-		log.Fatal("Connection failed:", err)
+		return fmt.Errorf("connection failed: %w", err)
 	}
 	defer conn.Close()
 
-	// Create a channel
 	ch, err := conn.Channel()
 	if err != nil {
-		log.Fatal("Channel creation failed:", err)
+		return fmt.Errorf("channel creation failed: %w", err)
 	}
 	defer ch.Close()
 
-	// Declare the same queue as the producer
+	// Declare the Quorum Queue
 	q, err := ch.QueueDeclare(
 		"homework",
 		true,
 		false,
 		false,
 		false,
-		nil,
+		amqp.Table{
+			"x-queue-type": "quorum",
+		},
 	)
 	if err != nil {
-		log.Fatal("Queue declaration failed:", err)
+		return fmt.Errorf("queue declaration failed: %w", err)
 	}
 
-	// Limit unacknowledged messages
-	err = ch.Qos(
-		1,     // prefetch count
-		0,     // prefetch size
-		false, // global
-	)
+	// Process one unacknowledged message at a time
+	err = ch.Qos(1, 0, false)
 	if err != nil {
-		log.Fatal("QoS configuration failed:", err)
+		return fmt.Errorf("QoS configuration failed: %w", err)
 	}
 
-	// Start consuming messages
 	msgs, err := ch.Consume(
 		q.Name,
-		"",    // consumer name
-		false, // auto-ack (false = manual acknowledgment)
-		false, // exclusive
-		false, // no-local
-		false, // no-wait
+		"",
+		false, // manual acknowledgment
+		false,
+		false,
+		false,
 		nil,
 	)
 	if err != nil {
-		log.Fatal("Consumer registration failed:", err)
+		return fmt.Errorf("consumer registration failed: %w", err)
 	}
 
-	log.Println("Waiting for messages...")
+	log.Printf("Successfully connected. Waiting for messages...")
 
-	// Process incoming messages
 	for msg := range msgs {
 		log.Printf(
-			"Received message: ID=%s Body=%s",
+			"Received: ID=%s Body=%s",
 			msg.MessageId,
 			string(msg.Body),
 		)
 
-		// Acknowledge successful processing
+		// Acknowledge only after processing
 		err := msg.Ack(false)
 		if err != nil {
-			log.Println("Acknowledgment failed:", err)
-			continue
+			return fmt.Errorf("acknowledgment failed: %w", err)
 		}
 
 		log.Printf("Message %s acknowledged", msg.MessageId)
+	}
+
+	return fmt.Errorf("message channel closed")
+}
+
+
+func main() {
+	for {
+		for _, node := range nodes {
+			err := consumeFrom(node)
+
+			if err != nil {
+				log.Printf("Connection to node failed/lost: %v", err)
+			}
+
+			// If Node 2 fails, immediately try Node 3.
+			// If Node 3 disconnects, start again with Node 2.
+		}
+
+		log.Println("All nodes tried. Retrying in 3 seconds...")
+		time.Sleep(3 * time.Second)
 	}
 }

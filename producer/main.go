@@ -30,7 +30,9 @@ func main() {
 		false, // auto-delete
 		false, // exclusive
 		false, // no-wait
-		nil,
+		amqp.Table{
+			"x-queue-type": "quorum",
+		},
 	)
 	if err != nil {
 		log.Fatal("Queue declaration failed:", err)
