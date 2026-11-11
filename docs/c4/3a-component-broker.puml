@@ -1,0 +1,36 @@
+@startuml
+!include <C4/C4_Component>
+LAYOUT_TOP_DOWN()
+title Component Diagram (a) - Inside a RabbitMQ node
+
+Container_Ext(clients, "Producer / Consumer", "AMQP 0-9-1 clients")
+Container_Ext(peers, "Peer nodes rabbit2, rabbit3", "Ra followers / leader")
+Container_Ext(prom, "Prometheus")
+
+Container_Boundary(node, "rabbit1 (same on every node)") {
+  Component(conn, "Connection Handler", "rabbit_reader / writer", "TCP + AMQP handshake, auth, heartbeats (5 s), flow control / blocked notifications")
+  Component(chan, "Channel", "rabbit_channel", "Publisher-confirm tracker (delivery tags), consumer QoS prefetch, unacked map, basic.return for mandatory")
+  Component(router, "Exchange Router", "default/direct exchange", "Routes routing key 'homework' to the queue; unroutable+mandatory -> basic.return")
+  Component(qqclient, "Quorum Queue Client", "rabbit_fifo_client", "Sends enqueue/settle commands to the current Raft leader; re-targets after election")
+  Component(raft, "Quorum Queue Raft Member", "Ra server + rabbit_fifo", "Leader or follower. Leader appends to log, replicates, commits at majority, then confirms")
+  Component(wal, "Ra WAL + Segment Store", "disk /var/lib/rabbitmq", "fsync'd write-ahead log; persistent volume rabbitN_data")
+  Component(policy, "Policy Engine", "rabbit_policy", "homework-qq: delivery-limit 5, DLX '' -> homework.dlq")
+  Component(dlx, "Dead-letter Handler", "rabbit_fifo_dlx", "Moves poison messages (delivery-limit exceeded) to homework.dlq")
+  Component(part, "Partition Handler", "rabbit_node_monitor", "pause_minority: a node that sees < 2 of 3 nodes pauses and drops its clients")
+  Component(mgmt, "Management Plugin", "HTTP API / UI :15672", "Queues, leader, members, policies, connections")
+  Component(exp, "Prometheus Exporter", "rabbitmq_prometheus :15692", "/metrics (aggregated), /metrics/per-object")
+}
+
+Rel(clients, conn, "AMQP", ":5672")
+Rel(conn, chan, "frames")
+Rel(chan, router, "basic.publish")
+Rel(router, qqclient, "deliver to queue")
+Rel(qqclient, raft, "enqueue / settle / checkout")
+Rel(raft, wal, "append + fsync")
+BiRel(raft, peers, "AppendEntries / votes", "Erlang dist :25672")
+Rel(raft, chan, "applied -> confirm / deliver")
+Rel(policy, raft, "configures")
+Rel(raft, dlx, "delivery-limit exceeded")
+Rel(part, conn, "pause -> close client connections")
+Rel(prom, exp, "scrape")
+@enduml

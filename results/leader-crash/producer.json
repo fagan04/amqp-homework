@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 128000,
+    "min_ms": 0.866,
+    "avg_ms": 16.357,
+    "p50_ms": 8.096,
+    "p95_ms": 54.496,
+    "p99_ms": 152.59,
+    "p999_ms": 296.242,
+    "max_ms": 327.246
+  },
+  "confirmed_total": 128000,
+  "count_per_worker": 32000,
+  "elapsed_s": 64.030358999,
+  "expected_total": 128000,
+  "inflight": 100,
+  "nacked": 1,
+  "published_calls": 128104,
+  "reconnects": 2,
+  "republished": 105,
+  "returned": 0,
+  "run_id": "leader-crash-200510",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.0517311014771,
+  "workers": 4
+}

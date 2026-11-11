@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 96000,
+    "min_ms": 2.294,
+    "avg_ms": 13.637,
+    "p50_ms": 12.708,
+    "p95_ms": 23.65,
+    "p99_ms": 34.031,
+    "p999_ms": 63.786,
+    "max_ms": 79.24
+  },
+  "confirmed_total": 96000,
+  "count_per_worker": 12000,
+  "elapsed_s": 11.425637907,
+  "expected_total": 96000,
+  "inflight": 16,
+  "nacked": 0,
+  "published_calls": 96000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "tp-8-16",
+  "size_bytes": 512,
+  "target_rate": 0,
+  "throughput_msg_s": 8402.156691941454,
+  "workers": 8
+}

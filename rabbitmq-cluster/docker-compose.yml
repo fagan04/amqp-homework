@@ -1,5 +1,5 @@
 x-rabbitmq: &rabbitmq
-  image: rabbitmq:4-management
+  image: rabbitmq:4.1-management   # pinned for reproducibility
   command: >
     sh -c "rabbitmq-plugins enable --offline rabbitmq_prometheus && exec rabbitmq-server"
   networks:
@@ -60,12 +60,13 @@ services:
         condition: service_healthy
 
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v3.5.0
     container_name: prometheus
     ports:
       - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro
       - prometheus_data:/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
@@ -73,12 +74,33 @@ services:
     networks:
       - rabbitnet
     depends_on:
-      rabbit1:
+      rabbit3:
+        condition: service_healthy
+
+  # One-shot job: waits for the 3-node cluster and applies operator policies.
+  rabbit-init:
+    image: rabbitmq:4.1-management
+    container_name: rabbit-init
+    hostname: rabbit-init
+    environment:
+      ERLANG_COOKIE: ${ERLANG_COOKIE}
+    entrypoint: ["/bin/sh", "/init/init.sh"]
+    volumes:
+      - ./init:/init:ro
+    networks:
+      - rabbitnet
+    restart: "no"
+    depends_on:
+      rabbit3:
         condition: service_healthy
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:12.1.0
     container_name: grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/rabbitmq-hw2.json
     ports:
       - "3000:3000"
     volumes:

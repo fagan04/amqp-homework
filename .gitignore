@@ -1,0 +1,4 @@
+rabbitmq-cluster/.env
+bin/
+*.log
+!results/**/*.log

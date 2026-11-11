@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 40000,
+    "min_ms": 4.606,
+    "avg_ms": 32.806,
+    "p50_ms": 30.346,
+    "p95_ms": 58.924,
+    "p99_ms": 77.557,
+    "p999_ms": 100.201,
+    "max_ms": 102.82
+  },
+  "confirmed_total": 40000,
+  "count_per_worker": 10000,
+  "elapsed_s": 2.765971595,
+  "expected_total": 40000,
+  "inflight": 128,
+  "nacked": 0,
+  "published_calls": 40000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "sz-128",
+  "size_bytes": 128,
+  "target_rate": 0,
+  "throughput_msg_s": 14461.464489478967,
+  "workers": 4
+}

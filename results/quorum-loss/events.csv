@@ -1,0 +1,8 @@
+epoch_ms,type,detail
+1794413338799,leader,rabbit1
+1794413339833,load_start,rate=2000 workers=4 count=30000
+1794413354859,kill,rabbit2+rabbit3
+1794413375238,start,rabbit2
+1794413385278,start,rabbit3
+1794413399901,producer_done,exit=0
+1794413403804,consumer_done,exit=0

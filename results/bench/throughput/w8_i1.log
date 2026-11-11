@@ -1,0 +1,24 @@
+{"time":"2026-11-11T20:12:31.023691945+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.02476381+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"tp-8-1","workers":8,"count_per_worker":1500,"rate":0,"size":512,"inflight":1,"nodes":3}
+{"time":"2026-11-11T20:12:31.031557092+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":7,"node":"rabbit2:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.032692851+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":1,"node":"rabbit2:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.035419117+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":5,"node":"rabbit3:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.035468983+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":2,"node":"rabbit3:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.035822133+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":4,"node":"rabbit2:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.044492354+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":0,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.05025945+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":6,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:31.050296197+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-1","worker":3,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:32.025882839+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-1","t_s":1,"confirmed":2066,"confirmed_per_s":2066,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:33.026251085+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-1","t_s":2,"confirmed":4089,"confirmed_per_s":2023,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:34.025741164+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-1","t_s":3,"confirmed":6443,"confirmed_per_s":2354,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:35.025676804+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-1","t_s":4,"confirmed":8689,"confirmed_per_s":2246,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:35.901549508+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":4,"confirmed":1500}
+{"time":"2026-11-11T20:12:35.906459978+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":7,"confirmed":1500}
+{"time":"2026-11-11T20:12:35.919429554+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":1,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.02593779+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-1","t_s":5,"confirmed":10906,"confirmed_per_s":2217,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:36.536661948+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":2,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.588950954+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":5,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.635168636+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":0,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.670409931+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":6,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.673921687+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-1","worker":3,"confirmed":1500}
+{"time":"2026-11-11T20:12:36.675696779+04:00","level":"INFO","msg":"done","component":"producer","run_id":"tp-8-1","summary":{"all_confirmed":true,"confirm_latency":{"count":12000,"min_ms":0.893,"avg_ms":3.536,"p50_ms":3.239,"p95_ms":5.799,"p99_ms":8.84,"p999_ms":43.095,"max_ms":47.3},"confirmed_total":12000,"count_per_worker":1500,"elapsed_s":5.64919859,"expected_total":12000,"inflight":1,"nacked":0,"published_calls":12000,"reconnects":0,"republished":0,"returned":0,"run_id":"tp-8-1","size_bytes":512,"target_rate":0,"throughput_msg_s":2124.1951064071195,"workers":8}}

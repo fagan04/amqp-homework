@@ -1,0 +1,6 @@
+epoch_ms,type,detail
+1794413499351,publish,4x5000, no consumer
+1794413500895,kill,rabbit1+rabbit2+rabbit3 (SIGKILL)
+1794413506197,start,all nodes
+1794413518802,healthy,cluster back
+1794413523361,consumed,exit=0

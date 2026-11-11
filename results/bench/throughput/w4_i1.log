@@ -1,0 +1,14 @@
+{"time":"2026-11-11T20:12:12.565674279+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-1","node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:12.567129696+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"tp-4-1","workers":4,"count_per_worker":1500,"rate":0,"size":512,"inflight":1,"nodes":3}
+{"time":"2026-11-11T20:12:12.575205225+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-1","worker":1,"node":"rabbit2:5672","attempt":1}
+{"time":"2026-11-11T20:12:12.575699751+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-1","worker":3,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:12.575711473+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-1","worker":0,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:12:12.577852173+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-1","worker":2,"node":"rabbit3:5672","attempt":1}
+{"time":"2026-11-11T20:12:13.567715321+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-4-1","t_s":1,"confirmed":1438,"confirmed_per_s":1438,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:14.567687857+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-4-1","t_s":2,"confirmed":3001,"confirmed_per_s":1563,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:15.568477011+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-4-1","t_s":3,"confirmed":4605,"confirmed_per_s":1604,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:12:15.866294054+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-1","worker":1,"confirmed":1500}
+{"time":"2026-11-11T20:12:16.4081623+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-1","worker":2,"confirmed":1500}
+{"time":"2026-11-11T20:12:16.460366986+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-1","worker":0,"confirmed":1500}
+{"time":"2026-11-11T20:12:16.482435089+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-1","worker":3,"confirmed":1500}
+{"time":"2026-11-11T20:12:16.484016602+04:00","level":"INFO","msg":"done","component":"producer","run_id":"tp-4-1","summary":{"all_confirmed":true,"confirm_latency":{"count":6000,"min_ms":0.842,"avg_ms":2.477,"p50_ms":2.305,"p95_ms":3.933,"p99_ms":6.306,"p999_ms":13.739,"max_ms":23.566},"confirmed_total":6000,"count_per_worker":1500,"elapsed_s":3.914988881,"expected_total":6000,"inflight":1,"nacked":0,"published_calls":6000,"reconnects":0,"republished":0,"returned":0,"run_id":"tp-4-1","size_bytes":512,"target_rate":0,"throughput_msg_s":1532.5714024677966,"workers":4}}

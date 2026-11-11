@@ -1,0 +1,70 @@
+{
+  "ack_errors": 0,
+  "acked": 20000,
+  "duplicates": 0,
+  "e2e_latency": {
+    "count": 20000,
+    "min_ms": 19452.285,
+    "avg_ms": 21048.216,
+    "p50_ms": 21009.933,
+    "p95_ms": 22400.217,
+    "p99_ms": 22476.206,
+    "p999_ms": 22481.688,
+    "max_ms": 22485.23
+  },
+  "elapsed_s": 4.536592211,
+  "events": [
+    {
+      "t_s": 0.00403759,
+      "type": "connected",
+      "node": "rabbit1:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 0,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "full-restart-201129-p0": {
+      "gaps_seen": 0,
+      "max_seq": 5000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 5000
+    },
+    "full-restart-201129-p1": {
+      "gaps_seen": 0,
+      "max_seq": 5000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 5000
+    },
+    "full-restart-201129-p2": {
+      "gaps_seen": 0,
+      "max_seq": 5000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 5000
+    },
+    "full-restart-201129-p3": {
+      "gaps_seen": 0,
+      "max_seq": 5000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 5000
+    }
+  },
+  "producers": 4,
+  "received": 20000,
+  "redelivered_flag": 0,
+  "run_id": "full-restart-201129",
+  "switch_backs": 0,
+  "unique": 20000,
+  "zero_loss": true
+}

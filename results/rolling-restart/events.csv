@@ -1,0 +1,11 @@
+epoch_ms,type,detail
+1794413404028,leader,rabbit1
+1794413405057,load_start,rate=2000 workers=4 count=40000
+1794413413097,restart,rabbit1
+1794413439007,healthy,after rabbit1
+1794413447046,restart,rabbit2
+1794413472462,healthy,after rabbit2
+1794413480512,restart,rabbit3
+1794413489556,healthy,after rabbit3
+1794413489579,producer_done,exit=0
+1794413489607,consumer_done,exit=0
