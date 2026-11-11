@@ -239,14 +239,14 @@ def bench_charts():
     ax.set_xscale("log"); ax.set_yscale("log")
     ax.xaxis.set_minor_locator(NullLocator())
     ax.set_xticks(xs); ax.set_xticklabels([f"{x:,}" for x in xs])
-    ax.axvspan(3000, max(xs) * 1.3, color="#d9d8d3", alpha=0.5, lw=0)
-    ax.text(3150, 1.2, "consumer saturated\n(backlog grows)", fontsize=8, color=INK2, va="bottom")
     ax.set_xlim(min(xs) * 0.8, max(xs) * 1.3)
     ax.set_ylim(1, max(float(x["e2e_p99_ms"]) for x in rows) * 4)
-    ax.set_xlabel("offered load (msg/s, 512 B, 4 producers + 1 consumer on a 2-vCPU host)")
+    ax.set_xlabel("offered load (msg/s, 512 B persistent, 4 producers + 1 consumer)")
     ax.set_ylabel("latency (ms, log scale)")
     r2 = next(x for x in rows if x["offered_rate"] == "2000")
-    ax.set_title(f"End-to-end p99 stays ≤ {float(r2['e2e_p99_ms']):.0f} ms up to 2,000 msg/s; beyond that the consumer saturates",
+    worst = max(rows, key=lambda x: float(x["e2e_p99_ms"]))
+    ax.set_title(f"p99 ≤ {float(r2['e2e_p99_ms']):.1f} ms up to 2,000 msg/s; tail reaches "
+                 f"{float(worst['e2e_p99_ms']):,.0f} ms at {int(worst['offered_rate']):,} msg/s",
                  loc="left", fontsize=11)
     ax.legend(loc="upper left")
     fig.tight_layout(); fig.savefig(os.path.join(OUT, "bench-latency.png"), dpi=160); plt.close(fig)

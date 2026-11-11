@@ -220,5 +220,5 @@ Re-render with `java -jar plantuml.jar -tpng docs/c4/*.puml`.
 * The consumer's idempotency store is in memory. A restarted consumer could reprocess messages
   that were redelivered after its crash. Production would use a persistent store (Redis or a DB
   unique key).
-* Benchmark numbers come from a single-host test harness (see REPORT.md §2) and are relative,
-  not production capacity figures.
+* Benchmark numbers come from one laptop running brokers, monitoring and clients together
+  (docker compose, see docs/TEST-HARNESS.md); they are relative, not production capacity figures.
