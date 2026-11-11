@@ -1,7 +1,7 @@
 epoch_ms,type,detail
-1794413257403,leader,rabbit3
-1794413258434,load_start,rate=2000 workers=4 count=40000
-1794413273535,partition,rabbit3
-1794413313674,heal,rabbit3
-1794413338509,producer_done,exit=0
-1794413338531,consumer_done,exit=0
+1794431278167,leader,rabbit3
+1794431279231,load_start,rate=2000 workers=4 count=40000
+1794431294308,partition,rabbit3
+1794431334608,heal,rabbit3
+1794431359425,producer_done,exit=0
+1794431359454,consumer_done,exit=0

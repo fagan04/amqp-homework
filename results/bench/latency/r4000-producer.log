@@ -1,31 +1,31 @@
-{"time":"2026-11-11T20:15:39.907571694+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:15:39.908936042+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"lat-4000","workers":4,"count_per_worker":20000,"rate":4000,"size":512,"inflight":128,"nodes":3}
-{"time":"2026-11-11T20:15:39.913787582+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":3,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:15:39.914023308+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":0,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:15:39.915430038+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":2,"node":"rabbit3:5672","attempt":1}
-{"time":"2026-11-11T20:15:39.915937355+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":1,"node":"rabbit2:5672","attempt":1}
-{"time":"2026-11-11T20:15:40.909527027+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":1,"confirmed":3810,"confirmed_per_s":3810,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:41.90970716+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":2,"confirmed":7973,"confirmed_per_s":4163,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:42.909636934+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":3,"confirmed":11843,"confirmed_per_s":3870,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:43.909599717+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":4,"confirmed":15663,"confirmed_per_s":3820,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:44.923573761+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":5,"confirmed":19845,"confirmed_per_s":4182,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:45.91167155+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":6,"confirmed":23958,"confirmed_per_s":4113,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:46.90983586+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":7,"confirmed":27960,"confirmed_per_s":4002,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:47.90963078+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":8,"confirmed":31825,"confirmed_per_s":3865,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:48.929359732+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":9,"confirmed":35870,"confirmed_per_s":4045,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:49.911884183+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":10,"confirmed":39958,"confirmed_per_s":4088,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:50.909694125+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":11,"confirmed":43939,"confirmed_per_s":3981,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:51.909541488+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":12,"confirmed":47903,"confirmed_per_s":3964,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:52.914316977+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":13,"confirmed":51763,"confirmed_per_s":3860,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:53.911630405+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":14,"confirmed":55884,"confirmed_per_s":4121,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:54.910115243+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":15,"confirmed":59865,"confirmed_per_s":3981,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:55.909363404+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":16,"confirmed":63803,"confirmed_per_s":3938,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:56.909272252+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":17,"confirmed":67955,"confirmed_per_s":4152,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:57.910023587+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":18,"confirmed":71863,"confirmed_per_s":3908,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:58.909449028+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":19,"confirmed":75225,"confirmed_per_s":3362,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:59.909595154+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":20,"confirmed":79916,"confirmed_per_s":4691,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:15:59.914818007+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":1,"confirmed":20000}
-{"time":"2026-11-11T20:15:59.914878469+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":0,"confirmed":20000}
-{"time":"2026-11-11T20:15:59.914903634+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":3,"confirmed":20000}
-{"time":"2026-11-11T20:15:59.924063287+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":2,"confirmed":20000}
-{"time":"2026-11-11T20:15:59.932610326+04:00","level":"INFO","msg":"done","component":"producer","run_id":"lat-4000","summary":{"all_confirmed":true,"confirm_latency":{"count":80000,"min_ms":0.958,"avg_ms":29.281,"p50_ms":19.2,"p95_ms":82.434,"p99_ms":190.166,"p999_ms":323.002,"max_ms":360.113},"confirmed_total":80000,"count_per_worker":20000,"elapsed_s":20.0151112,"expected_total":80000,"inflight":128,"nacked":0,"published_calls":80000,"reconnects":0,"republished":0,"returned":0,"run_id":"lat-4000","size_bytes":512,"target_rate":4000,"throughput_msg_s":3996.980041759648,"workers":4}}
+{"time":"2026-11-12T00:56:53.148092+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:56:53.151513+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"lat-4000","workers":4,"count_per_worker":20000,"rate":4000,"size":512,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:56:53.161332+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:56:53.162855+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:56:53.162908+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:56:53.164336+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"lat-4000","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:56:54.151775+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":1,"confirmed":3993,"confirmed_per_s":3993,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:56:55.151867+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":2,"confirmed":7994,"confirmed_per_s":4001,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:56:56.151811+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":3,"confirmed":11995,"confirmed_per_s":4001,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:56:57.151791+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":4,"confirmed":15995,"confirmed_per_s":4000,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:56:58.151869+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":5,"confirmed":19996,"confirmed_per_s":4001,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:56:59.151802+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":6,"confirmed":23992,"confirmed_per_s":3996,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:00.151816+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":7,"confirmed":27996,"confirmed_per_s":4004,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:01.15186+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":8,"confirmed":31988,"confirmed_per_s":3992,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:02.151848+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":9,"confirmed":35992,"confirmed_per_s":4004,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:03.15184+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":10,"confirmed":39996,"confirmed_per_s":4004,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:04.15192+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":11,"confirmed":43992,"confirmed_per_s":3996,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:05.151966+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":12,"confirmed":47996,"confirmed_per_s":4004,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:06.1519+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":13,"confirmed":51992,"confirmed_per_s":3996,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:07.151935+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":14,"confirmed":55993,"confirmed_per_s":4001,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:08.151872+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":15,"confirmed":59996,"confirmed_per_s":4003,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:09.151875+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":16,"confirmed":63994,"confirmed_per_s":3998,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:10.15191+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":17,"confirmed":67996,"confirmed_per_s":4002,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:11.151913+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":18,"confirmed":71992,"confirmed_per_s":3996,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:12.15193+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":19,"confirmed":75987,"confirmed_per_s":3995,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:13.151951+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"lat-4000","t_s":20,"confirmed":79996,"confirmed_per_s":4009,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:57:13.153103+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":0,"confirmed":20000}
+{"time":"2026-11-12T00:57:13.153118+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":2,"confirmed":20000}
+{"time":"2026-11-12T00:57:13.153117+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":3,"confirmed":20000}
+{"time":"2026-11-12T00:57:13.153845+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"lat-4000","worker":1,"confirmed":20000}
+{"time":"2026-11-12T00:57:13.160211+04:00","level":"INFO","msg":"done","component":"producer","run_id":"lat-4000","summary":{"all_confirmed":true,"confirm_latency":{"count":80000,"min_ms":0.979,"avg_ms":5.347,"p50_ms":2.112,"p95_ms":5.445,"p99_ms":164.101,"p999_ms":235.142,"max_ms":272.344},"confirmed_total":80000,"count_per_worker":20000,"elapsed_s":20.002102584,"expected_total":80000,"inflight":128,"nacked":0,"published_calls":80000,"reconnects":0,"republished":0,"returned":0,"run_id":"lat-4000","size_bytes":512,"target_rate":4000,"throughput_msg_s":3999.579527403948,"workers":4}}

@@ -1,7 +1,7 @@
 epoch_ms,type,detail
-1794413045214,leader,rabbit1
-1794413046246,load_start,rate=2000 workers=4 count=32000
-1794413061272,kill,rabbit2
-1794413081496,start,rabbit2
-1794413110308,producer_done,exit=0
-1794413110323,consumer_done,exit=0
+1794427104910,leader,rabbit1
+1794427105999,load_start,rate=2000 workers=4 count=32000
+1794427121073,kill,rabbit2
+1794427141500,start,rabbit2
+1794427170177,producer_done,exit=0
+1794427170211,consumer_done,exit=0

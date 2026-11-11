@@ -2,17 +2,17 @@
   "all_confirmed": true,
   "confirm_latency": {
     "count": 12000,
-    "min_ms": 19.91,
-    "avg_ms": 58.048,
-    "p50_ms": 54.27,
-    "p95_ms": 94.751,
-    "p99_ms": 105.712,
-    "p999_ms": 108.132,
-    "max_ms": 110.815
+    "min_ms": 10.381,
+    "avg_ms": 18.615,
+    "p50_ms": 16.916,
+    "p95_ms": 32.239,
+    "p99_ms": 50.039,
+    "p999_ms": 55.449,
+    "max_ms": 55.508
   },
   "confirmed_total": 12000,
   "count_per_worker": 12000,
-  "elapsed_s": 1.407695789,
+  "elapsed_s": 0.449981709,
   "expected_total": 12000,
   "inflight": 512,
   "nacked": 0,
@@ -23,6 +23,6 @@
   "run_id": "tp-1-512",
   "size_bytes": 512,
   "target_rate": 0,
-  "throughput_msg_s": 8524.569082162681,
+  "throughput_msg_s": 26667.75062183694,
   "workers": 1
 }

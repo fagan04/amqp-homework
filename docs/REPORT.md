@@ -7,9 +7,9 @@
 ## Headline
 
 * **8 / 8 failure scenarios with zero message loss** (916,000 messages in total).
-* Peak confirmed publish throughput: **15,586 msg/s**
-  (4 workers, confirm window 512, 512 B persistent, majority-replicated).
-* End-to-end latency p99 at 2,000 msg/s: **53.9 ms**.
+* Peak confirmed publish throughput: **58,185 msg/s**
+  (8 workers, confirm window 512, 512 B persistent, majority-replicated).
+* End-to-end latency p99 at 2,000 msg/s: **6.1 ms**.
 
 ## Chaos scenarios
 
@@ -19,12 +19,12 @@ Load: 4 producer workers, 2,000 msg/s total, 512 B persistent; 1 consumer, prefe
 | Scenario | Messages | Zero loss | Dupes removed | Out of order | Re-published | Leader before → after | Election (s)* | Publish stall (s) | Consumer detect / reconnect (s) | Rejoin (s) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | baseline | 40,000 | True | 0 | 0 | 0 | – → – | – | – | – / – | – |
-| node-crash | 128,000 | True | 97 | 12 | 48 | rabbit1 → – | – | 0 | 0.17 / 0.21 | 8.5 |
-| leader-crash | 128,000 | True | 0 | 0 | 105 | rabbit1 → rabbit3 | 0.4 | 0 | – / – | 20.5 |
-| partition | 160,000 | True | 38 | 67 | 74 | rabbit1 → – | – | 0 | 7.54 / 0.21 | 23.3 |
-| partition-leader | 160,000 | True | 98 | 99 | 200 | rabbit3 → rabbit1 | 17.88 | 6 | 7.62 / 0.2 | 3.5 |
-| quorum-loss | 120,000 | True | 140 | 133 | 212 | rabbit1 → – | – | 30 | 0.19 / 0.2 | 8.3 |
-| rolling-restart | 160,000 | True | 69 | 0 | 60 | rabbit1 → rabbit2 | 8.69 | 0 | – / 0.21 | – |
+| node-crash | 128,000 | True | 3 | 0 | 4 | rabbit1 → – | – | 0 | 0.04 / 0.2 | 11.2 |
+| leader-crash | 128,000 | True | 22 | 0 | 34 | rabbit1 → rabbit3 | 0.55 | 0 | – / – | 11.3 |
+| partition | 160,000 | True | 2 | 0 | 3 | rabbit1 → – | – | 0 | 3.99 / 0.2 | 1.4 |
+| partition-leader | 160,000 | True | 1 | 0 | 2 | rabbit3 → rabbit1 | 18.22 | 9 | 0.37 / 0.22 | 1.7 |
+| quorum-loss | 120,000 | True | 89 | 0 | 97 | rabbit1 → – | – | 28 | 0.03 / 0.2 | 4.6 |
+| rolling-restart | 160,000 | True | 10 | 0 | 16 | rabbit1 → rabbit2 | 0.25 | 0 | – / 0.2 | – |
 | full-restart | 20,000 | True | 0 | 0 | 0 | – → – | – | – | – / – | – |
 
 \* Election time is when `clustermon` (250 ms polling of the management API) first showed the new leader.
@@ -53,18 +53,18 @@ Timelines (grey = a node down or isolated):
 
 | Workers | Window | Messages | Confirmed msg/s | Confirm p50 (ms) | Confirm p99 (ms) |
 |---|---|---|---|---|---|
-| 1 | 1 | 1,500 | 827 | 1.132 | 2.277 |
-| 1 | 16 | 12,000 | 3,384 | 4.225 | 11.823 |
-| 1 | 128 | 12,000 | 6,975 | 15.108 | 55.976 |
-| 1 | 512 | 12,000 | 8,525 | 54.27 | 105.712 |
-| 4 | 1 | 6,000 | 1,533 | 2.305 | 6.306 |
-| 4 | 16 | 48,000 | 6,457 | 8.307 | 27.587 |
-| 4 | 128 | 48,000 | 12,594 | 34.63 | 82.874 |
-| 4 | 512 | 48,000 | 15,586 | 105.009 | 249.625 |
-| 8 | 1 | 12,000 | 2,124 | 3.239 | 8.84 |
-| 8 | 16 | 96,000 | 8,402 | 12.708 | 34.031 |
-| 8 | 128 | 96,000 | 14,208 | 58.945 | 254.44 |
-| 8 | 512 | 96,000 | 14,120 | 207.852 | 989.797 |
+| 1 | 1 | 1,500 | 960 | 0.983 | 1.644 |
+| 1 | 16 | 12,000 | 5,691 | 2.246 | 8.001 |
+| 1 | 128 | 12,000 | 23,479 | 5.247 | 9.626 |
+| 1 | 512 | 12,000 | 26,668 | 16.916 | 50.039 |
+| 4 | 1 | 6,000 | 2,131 | 1.782 | 3.088 |
+| 4 | 16 | 48,000 | 15,014 | 3.638 | 11.523 |
+| 4 | 128 | 48,000 | 39,903 | 10.768 | 48.444 |
+| 4 | 512 | 48,000 | 48,862 | 33.95 | 71.144 |
+| 8 | 1 | 12,000 | 3,289 | 2.112 | 7.955 |
+| 8 | 16 | 96,000 | 26,122 | 4.573 | 7.372 |
+| 8 | 128 | 96,000 | 54,551 | 16.2 | 69.692 |
+| 8 | 512 | 96,000 | 58,185 | 59.373 | 136.526 |
 
 ### Message size (4 workers, window 128)
 
@@ -72,11 +72,11 @@ Timelines (grey = a node down or isolated):
 
 | Size (B) | msg/s | MB/s | Confirm p50 (ms) | Confirm p99 (ms) |
 |---|---|---|---|---|
-| 128 | 14,461 | 1.85 | 30.346 | 77.557 |
-| 1024 | 12,863 | 13.17 | 33.093 | 91.675 |
-| 4096 | 9,179 | 37.60 | 47.807 | 113.818 |
-| 16384 | 5,015 | 82.16 | 83.306 | 226.601 |
-| 65536 | 1,900 | 124.53 | 187.065 | 606.684 |
+| 128 | 31,966 | 4.09 | 10.348 | 86.455 |
+| 1024 | 44,505 | 45.57 | 10.561 | 19.691 |
+| 4096 | 30,589 | 125.29 | 15.344 | 41.698 |
+| 16384 | 12,237 | 200.49 | 37.662 | 71.644 |
+| 65536 | 3,148 | 206.32 | 129.531 | 405.587 |
 
 ### Consumer prefetch (manual ack)
 
@@ -84,10 +84,10 @@ Timelines (grey = a node down or isolated):
 
 | Prefetch | Messages | Elapsed (s) | Consumed msg/s |
 |---|---|---|---|
-| 1 | 40,000 | 44.04 | 908 |
-| 10 | 40,000 | 11.75 | 3,406 |
-| 100 | 40,000 | 3.74 | 10,695 |
-| 500 | 40,000 | 2.01 | 19,863 |
+| 1 | 40,000 | 43.12 | 928 |
+| 10 | 40,000 | 7.67 | 5,216 |
+| 100 | 40,000 | 1.63 | 24,491 |
+| 500 | 40,000 | 0.72 | 55,457 |
 
 ### Latency under load
 
@@ -95,11 +95,11 @@ Timelines (grey = a node down or isolated):
 
 | Offered msg/s | Achieved msg/s | E2E p50 (ms) | E2E p95 (ms) | E2E p99 (ms) | E2E max (ms) | Confirm p50 (ms) | Confirm p99 (ms) |
 |---|---|---|---|---|---|---|---|
-| 500 | 500 | 2.978 | 4.645 | 6.577 | 20.04 | 2.741 | 6.289 |
-| 1,000 | 1,000 | 3.124 | 7.569 | 13.524 | 26.199 | 2.85 | 14.362 |
-| 2,000 | 1,997 | 9.184 | 29.069 | 53.899 | 85.662 | 8.179 | 60.447 |
-| 4,000 | 3,997 | 765.715 | 1556.919 | 1839.287 | 1880.422 | 19.2 | 190.166 |
-| 8,000 | 7,911 | 16229.89 | 16613.252 | 16701.087 | 16733.718 | 35.379 | 130.983 |
+| 500 | 500 | 2.215 | 3.799 | 5.523 | 20.5 | 2.097 | 5.289 |
+| 1,000 | 1,000 | 1.796 | 3.168 | 5.467 | 12.01 | 1.687 | 5.189 |
+| 2,000 | 2,000 | 1.627 | 3.553 | 6.126 | 40.773 | 1.523 | 5.765 |
+| 4,000 | 4,000 | 2.226 | 6.293 | 283.838 | 451.041 | 2.112 | 164.101 |
+| 8,000 | 7,997 | 4.73 | 71.91 | 216.978 | 262.706 | 4.356 | 41.64 |
 
 Above ~3,000 msg/s the single consumer (sharing 2 vCPUs with 3 brokers and 4 publishers) falls behind,
 so end-to-end latency becomes queueing delay; confirm latency stays low, i.e. replication is not the bottleneck.

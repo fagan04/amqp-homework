@@ -1,81 +1,92 @@
 {
   "ack_errors": 0,
-  "acked": 160038,
-  "duplicates": 38,
+  "acked": 160002,
+  "duplicates": 2,
   "e2e_latency": {
     "count": 160000,
-    "min_ms": 0.738,
-    "avg_ms": 601.84,
-    "p50_ms": 7.943,
-    "p95_ms": 4489.132,
-    "p99_ms": 7405,
-    "p999_ms": 7900.064,
-    "max_ms": 17382.96
+    "min_ms": 0.643,
+    "avg_ms": 113.212,
+    "p50_ms": 1.573,
+    "p95_ms": 375.752,
+    "p99_ms": 3318.736,
+    "p999_ms": 3954.058,
+    "max_ms": 4050.235
   },
-  "elapsed_s": 81.059408881,
+  "elapsed_s": 81.088331625,
   "events": [
     {
-      "t_s": 0.004634674,
+      "t_s": 0.019520625,
       "type": "connected",
-      "node": "rabbit3:5672"
+      "node": "localhost:5674"
     },
     {
-      "t_s": 23.655873578,
+      "t_s": 20.01861725,
       "type": "failover",
-      "node": "rabbit3:5672",
-      "info": "delivery channel closed"
+      "node": "localhost:5674",
+      "info": "Exception (501) Reason: \"EOF\""
     },
     {
-      "t_s": 23.861829849,
+      "t_s": 20.222660375,
       "type": "connected",
-      "node": "rabbit2:5672"
+      "node": "localhost:5673"
+    },
+    {
+      "t_s": 59.231061833,
+      "type": "switch_back",
+      "node": "localhost:5674",
+      "info": "from localhost:5673"
+    },
+    {
+      "t_s": 59.236371917,
+      "type": "connected",
+      "node": "localhost:5674"
     }
   ],
   "expected_producers": 4,
   "failovers": 1,
   "foreign": 0,
-  "gaps_seen": 6,
+  "gaps_seen": 0,
   "missing_total": 0,
-  "out_of_order": 67,
+  "out_of_order": 0,
   "per_producer": {
-    "partition-200615-p0": {
-      "gaps_seen": 1,
+    "partition-010635-p0": {
+      "gaps_seen": 0,
       "max_seq": 40000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 20,
+      "out_of_order": 0,
       "unique": 40000
     },
-    "partition-200615-p1": {
-      "gaps_seen": 2,
+    "partition-010635-p1": {
+      "gaps_seen": 0,
       "max_seq": 40000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 25,
+      "out_of_order": 0,
       "unique": 40000
     },
-    "partition-200615-p2": {
-      "gaps_seen": 1,
+    "partition-010635-p2": {
+      "gaps_seen": 0,
       "max_seq": 40000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 1,
+      "out_of_order": 0,
       "unique": 40000
     },
-    "partition-200615-p3": {
-      "gaps_seen": 2,
+    "partition-010635-p3": {
+      "gaps_seen": 0,
       "max_seq": 40000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 21,
+      "out_of_order": 0,
       "unique": 40000
     }
   },
   "producers": 4,
-  "received": 160038,
-  "redelivered_flag": 107,
-  "run_id": "partition-200615",
-  "switch_backs": 0,
+  "received": 160002,
+  "redelivered_flag": 12,
+  "run_id": "partition-010635",
+  "switch_backs": 1,
   "unique": 160000,
   "zero_loss": true
 }

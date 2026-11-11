@@ -1,25 +1,20 @@
-{"time":"2026-11-11T20:12:48.209895576+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.212521543+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"tp-8-128","workers":8,"count_per_worker":12000,"rate":0,"size":512,"inflight":128,"nodes":3}
-{"time":"2026-11-11T20:12:48.219387419+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":2,"node":"rabbit3:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.220105849+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":6,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.221217039+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":5,"node":"rabbit3:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.242030258+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":0,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.248018118+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":3,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.271830994+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":7,"node":"rabbit2:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.287061565+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":1,"node":"rabbit2:5672","attempt":1}
-{"time":"2026-11-11T20:12:48.292876623+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":4,"node":"rabbit2:5672","attempt":1}
-{"time":"2026-11-11T20:12:49.21362515+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":1,"confirmed":6004,"confirmed_per_s":6004,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:50.213465271+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":2,"confirmed":21667,"confirmed_per_s":15663,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:51.212827449+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":3,"confirmed":37168,"confirmed_per_s":15501,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:52.213557425+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":4,"confirmed":54360,"confirmed_per_s":17192,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:53.214444025+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":5,"confirmed":70864,"confirmed_per_s":16504,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:53.84552027+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":1,"confirmed":12000}
-{"time":"2026-11-11T20:12:53.89918134+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":4,"confirmed":12000}
-{"time":"2026-11-11T20:12:53.9279724+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":7,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.213582356+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":6,"confirmed":86038,"confirmed_per_s":15174,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:12:54.578488355+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":2,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.606426593+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":5,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.966949846+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":0,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.967820795+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":6,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.969464616+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":3,"confirmed":12000}
-{"time":"2026-11-11T20:12:54.978192119+04:00","level":"INFO","msg":"done","component":"producer","run_id":"tp-8-128","summary":{"all_confirmed":true,"confirm_latency":{"count":96000,"min_ms":9.098,"avg_ms":65.306,"p50_ms":58.945,"p95_ms":118.597,"p99_ms":254.44,"p999_ms":301.031,"max_ms":365.23},"confirmed_total":96000,"count_per_worker":12000,"elapsed_s":6.75691611,"expected_total":96000,"inflight":128,"nacked":0,"published_calls":96000,"reconnects":0,"republished":0,"returned":0,"run_id":"tp-8-128","size_bytes":512,"target_rate":0,"throughput_msg_s":14207.664922452323,"workers":8}}
+{"time":"2026-11-12T00:54:38.827403+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:38.82887+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"tp-8-128","workers":8,"count_per_worker":12000,"rate":0,"size":512,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:54:38.832726+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:38.832792+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":4,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:38.834465+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":7,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:38.839964+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":5,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:38.83998+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:38.842684+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:38.843902+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:38.844193+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-8-128","worker":6,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:39.829239+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-8-128","t_s":1,"confirmed":54910,"confirmed_per_s":54910,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:54:40.307761+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":5,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.360342+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":2,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.530719+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":4,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.541026+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":1,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.546361+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":7,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.57486+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":6,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.586203+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":0,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.588745+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-8-128","worker":3,"confirmed":12000}
+{"time":"2026-11-12T00:54:40.59381+04:00","level":"INFO","msg":"done","component":"producer","run_id":"tp-8-128","summary":{"all_confirmed":true,"confirm_latency":{"count":96000,"min_ms":6.01,"avg_ms":17.669,"p50_ms":16.2,"p95_ms":25.782,"p99_ms":69.692,"p999_ms":89.88,"max_ms":97.495},"confirmed_total":96000,"count_per_worker":12000,"elapsed_s":1.759836167,"expected_total":96000,"inflight":128,"nacked":0,"published_calls":96000,"reconnects":0,"republished":0,"returned":0,"run_id":"tp-8-128","size_bytes":512,"target_rate":0,"throughput_msg_s":54550.53248715282,"workers":8}}

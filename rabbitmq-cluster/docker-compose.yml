@@ -17,13 +17,15 @@ services:
     hostname: rabbit1
     environment:
       RABBITMQ_NODENAME: rabbit@rabbit1
+      RABBITMQ_CONFIG_FILE: /etc/rabbitmq/hw2/rabbitmq.conf
       RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
     ports:
       - "5672:5672"
       - "15672:15672"
     volumes:
       - rabbit1_data:/var/lib/rabbitmq
-      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      # folder mount (not a single file): survives the file being replaced on the host
+      - ./rabbitmq:/etc/rabbitmq/hw2:ro
 
   rabbit2:
     <<: *rabbitmq
@@ -31,13 +33,15 @@ services:
     hostname: rabbit2
     environment:
       RABBITMQ_NODENAME: rabbit@rabbit2
+      RABBITMQ_CONFIG_FILE: /etc/rabbitmq/hw2/rabbitmq.conf
       RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
     ports:
       - "5673:5672"
       - "15673:15672"
     volumes:
       - rabbit2_data:/var/lib/rabbitmq
-      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      # folder mount (not a single file): survives the file being replaced on the host
+      - ./rabbitmq:/etc/rabbitmq/hw2:ro
     depends_on:
       rabbit1:
         condition: service_healthy
@@ -48,13 +52,15 @@ services:
     hostname: rabbit3
     environment:
       RABBITMQ_NODENAME: rabbit@rabbit3
+      RABBITMQ_CONFIG_FILE: /etc/rabbitmq/hw2/rabbitmq.conf
       RABBITMQ_ERLANG_COOKIE: ${ERLANG_COOKIE}
     ports:
       - "5674:5672"
       - "15674:15672"
     volumes:
       - rabbit3_data:/var/lib/rabbitmq
-      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+      # folder mount (not a single file): survives the file being replaced on the host
+      - ./rabbitmq:/etc/rabbitmq/hw2:ro
     depends_on:
       rabbit2:
         condition: service_healthy

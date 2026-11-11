@@ -2,17 +2,17 @@
   "all_confirmed": true,
   "confirm_latency": {
     "count": 40000,
-    "min_ms": 3.685,
-    "avg_ms": 35.685,
-    "p50_ms": 33.093,
-    "p95_ms": 62.302,
-    "p99_ms": 91.675,
-    "p999_ms": 128.863,
-    "max_ms": 137.021
+    "min_ms": 3.062,
+    "avg_ms": 10.877,
+    "p50_ms": 10.561,
+    "p95_ms": 15.829,
+    "p99_ms": 19.691,
+    "p999_ms": 25.445,
+    "max_ms": 25.478
   },
   "confirmed_total": 40000,
   "count_per_worker": 10000,
-  "elapsed_s": 3.10979563,
+  "elapsed_s": 0.898776084,
   "expected_total": 40000,
   "inflight": 128,
   "nacked": 0,
@@ -23,6 +23,6 @@
   "run_id": "sz-1024",
   "size_bytes": 1024,
   "target_rate": 0,
-  "throughput_msg_s": 12862.581583857973,
+  "throughput_msg_s": 44504.96704582985,
   "workers": 4
 }

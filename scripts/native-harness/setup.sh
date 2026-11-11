@@ -4,7 +4,7 @@
 # reproducing the docker-compose topology (hosts rabbit1..3, same ports,
 # same rabbitmq.conf). Requires root, iproute2 and rabbitmq-server (apt).
 set -e
-B=${B:-/home/claude/native}
+B=${B:-$HOME/rmq-harness}
 sudo ip link add br-rmq type bridge; sudo ip addr add 10.10.0.1/24 dev br-rmq; sudo ip link set br-rmq up
 sudo iptables -I FORWARD -i br-rmq -o br-rmq -j ACCEPT
 for i in 1 2 3; do

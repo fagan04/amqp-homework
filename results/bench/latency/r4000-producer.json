@@ -2,17 +2,17 @@
   "all_confirmed": true,
   "confirm_latency": {
     "count": 80000,
-    "min_ms": 0.958,
-    "avg_ms": 29.281,
-    "p50_ms": 19.2,
-    "p95_ms": 82.434,
-    "p99_ms": 190.166,
-    "p999_ms": 323.002,
-    "max_ms": 360.113
+    "min_ms": 0.979,
+    "avg_ms": 5.347,
+    "p50_ms": 2.112,
+    "p95_ms": 5.445,
+    "p99_ms": 164.101,
+    "p999_ms": 235.142,
+    "max_ms": 272.344
   },
   "confirmed_total": 80000,
   "count_per_worker": 20000,
-  "elapsed_s": 20.0151112,
+  "elapsed_s": 20.002102584,
   "expected_total": 80000,
   "inflight": 128,
   "nacked": 0,
@@ -23,6 +23,6 @@
   "run_id": "lat-4000",
   "size_bytes": 512,
   "target_rate": 4000,
-  "throughput_msg_s": 3996.980041759648,
+  "throughput_msg_s": 3999.579527403948,
   "workers": 4
 }

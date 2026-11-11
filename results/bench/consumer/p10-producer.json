@@ -2,17 +2,17 @@
   "all_confirmed": true,
   "confirm_latency": {
     "count": 40000,
-    "min_ms": 5.617,
-    "avg_ms": 34.798,
-    "p50_ms": 32.24,
-    "p95_ms": 58.405,
-    "p99_ms": 81.191,
-    "p999_ms": 103.153,
-    "max_ms": 118.898
+    "min_ms": 5.477,
+    "avg_ms": 15.918,
+    "p50_ms": 15.35,
+    "p95_ms": 25.651,
+    "p99_ms": 31.385,
+    "p999_ms": 39.225,
+    "max_ms": 48.152
   },
   "confirmed_total": 40000,
   "count_per_worker": 10000,
-  "elapsed_s": 2.947754282,
+  "elapsed_s": 1.3078319999999999,
   "expected_total": 40000,
   "inflight": 128,
   "nacked": 0,
@@ -23,6 +23,6 @@
   "run_id": "cons-10",
   "size_bytes": 512,
   "target_rate": 0,
-  "throughput_msg_s": 13569.65207183439,
+  "throughput_msg_s": 30584.968099878275,
   "workers": 4
 }

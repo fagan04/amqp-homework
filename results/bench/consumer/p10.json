@@ -4,20 +4,20 @@
   "duplicates": 0,
   "e2e_latency": {
     "count": 40000,
-    "min_ms": 2959.125,
-    "avg_ms": 7432.492,
-    "p50_ms": 7415.485,
-    "p95_ms": 11381.201,
-    "p99_ms": 11689.261,
-    "p999_ms": 11752.708,
-    "max_ms": 11759.093
+    "min_ms": 1338.588,
+    "avg_ms": 4834.577,
+    "p50_ms": 4939.006,
+    "p95_ms": 7433.221,
+    "p99_ms": 7652.167,
+    "p999_ms": 7690.309,
+    "max_ms": 7693.898
   },
-  "elapsed_s": 11.74532023,
+  "elapsed_s": 7.668578625,
   "events": [
     {
-      "t_s": 0.003085274,
+      "t_s": 0.007301292,
       "type": "connected",
-      "node": "rabbit1:5672"
+      "node": "localhost:5672"
     }
   ],
   "expected_producers": 4,

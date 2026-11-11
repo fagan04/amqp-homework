@@ -1,4 +1,4 @@
-{"time":"2026-11-11T20:07:37.676087157+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"","to":"rabbit3","online_members":3}
-{"time":"2026-11-11T20:07:54.466528336+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"rabbit3","to":"unknown","online_members":0}
-{"time":"2026-11-11T20:08:12.142618801+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"unknown","to":"","online_members":2}
-{"time":"2026-11-11T20:08:12.943610529+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"","to":"rabbit1","online_members":2}
+{"time":"2026-11-12T01:07:58.537492+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"","to":"rabbit3","online_members":3}
+{"time":"2026-11-12T01:08:15.330741+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"rabbit3","to":"unknown","online_members":0}
+{"time":"2026-11-12T01:08:32.219201+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"unknown","to":"rabbit3","online_members":2}
+{"time":"2026-11-12T01:08:32.532411+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"rabbit3","to":"rabbit1","online_members":2}

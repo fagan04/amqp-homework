@@ -1,12 +1,11 @@
-{"time":"2026-11-11T20:13:12.334994782+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:13:12.33594131+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"sz-16384","workers":4,"count_per_worker":2500,"rate":0,"size":16384,"inflight":128,"nodes":3}
-{"time":"2026-11-11T20:13:12.34178062+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":3,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:13:12.343032041+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":1,"node":"rabbit2:5672","attempt":1}
-{"time":"2026-11-11T20:13:12.34361886+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":0,"node":"rabbit1:5672","attempt":1}
-{"time":"2026-11-11T20:13:12.347876788+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":2,"node":"rabbit3:5672","attempt":1}
-{"time":"2026-11-11T20:13:13.337116118+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-16384","t_s":1,"confirmed":5843,"confirmed_per_s":5843,"republished":0,"reconnects":0}
-{"time":"2026-11-11T20:13:13.764969023+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":1,"confirmed":2500}
-{"time":"2026-11-11T20:13:14.271735949+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":2,"confirmed":2500}
-{"time":"2026-11-11T20:13:14.311899107+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":3,"confirmed":2500}
-{"time":"2026-11-11T20:13:14.330091919+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":0,"confirmed":2500}
-{"time":"2026-11-11T20:13:14.332682301+04:00","level":"INFO","msg":"done","component":"producer","run_id":"sz-16384","summary":{"all_confirmed":true,"confirm_latency":{"count":10000,"min_ms":14.845,"avg_ms":91.77,"p50_ms":83.306,"p95_ms":177.659,"p99_ms":226.601,"p999_ms":241.411,"max_ms":244.318},"confirmed_total":10000,"count_per_worker":2500,"elapsed_s":1.994144458,"expected_total":10000,"inflight":128,"nacked":0,"published_calls":10000,"reconnects":0,"republished":0,"returned":0,"run_id":"sz-16384","size_bytes":16384,"target_rate":0,"throughput_msg_s":5014.68184006557,"workers":4}}
+{"time":"2026-11-12T00:54:46.157254+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:46.160371+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"sz-16384","workers":4,"count_per_worker":2500,"rate":0,"size":16384,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:54:46.165597+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:46.168288+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:46.175037+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:46.175151+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-16384","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:46.901243+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":2,"confirmed":2500}
+{"time":"2026-11-12T00:54:46.969021+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":1,"confirmed":2500}
+{"time":"2026-11-12T00:54:46.96915+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":3,"confirmed":2500}
+{"time":"2026-11-12T00:54:46.977624+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-16384","worker":0,"confirmed":2500}
+{"time":"2026-11-12T00:54:46.978863+04:00","level":"INFO","msg":"done","component":"producer","run_id":"sz-16384","summary":{"all_confirmed":true,"confirm_latency":{"count":10000,"min_ms":13.015,"avg_ms":39.348,"p50_ms":37.662,"p95_ms":60.96,"p99_ms":71.644,"p999_ms":81.098,"max_ms":85.157},"confirmed_total":10000,"count_per_worker":2500,"elapsed_s":0.817205042,"expected_total":10000,"inflight":128,"nacked":0,"published_calls":10000,"reconnects":0,"republished":0,"returned":0,"run_id":"sz-16384","size_bytes":16384,"target_rate":0,"throughput_msg_s":12236.831010643715,"workers":4}}

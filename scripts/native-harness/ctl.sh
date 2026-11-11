@@ -2,7 +2,7 @@
 # Native test-harness equivalent of the docker-compose cluster.
 # Each node runs in its own network namespace (rmqN, IP 10.10.0.1N, host rabbitN).
 # usage: ctl.sh start|stop|kill|partition|heal N
-B=/home/claude/native
+B=${B:-$HOME/rmq-harness}
 n=$2
 case $1 in
  start)

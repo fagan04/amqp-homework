@@ -98,8 +98,3 @@ VERDICT zero_loss=True
 | `-work-ms` | 0 | simulated processing time |
 
 Both write JSON logs to stderr, and `-stats-csv` / `-summary` files.
-
-## Team
-
-See commit history. Original cluster + monitoring: Murphy052; original clients: fagan; HW2 completion
-(client resilience rewrite, chaos/benchmark suite, docs): Aysu.

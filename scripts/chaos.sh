@@ -27,7 +27,7 @@ run_load() { # run_load <name> <count_per_worker> <consumer node order> <chaos f
   local total=$((count * WORKERS))
   echo "=== scenario $name: $WORKERS workers x $count msgs @ ${RATE} msg/s (run $run)"
   wait_cluster_healthy || return 1
-  reset_queue "$leader"
+  reset_queue "$leader" || return 1
   event leader "rabbit$(leader_node)"
 
   "$BIN/clustermon" -mgmt "$MGMT_URLS" -csv "$out/cluster.csv" -duration 15m 2> "$out/clustermon.log" &
@@ -117,14 +117,15 @@ full_restart() {  # persistence: publish, hard-kill ALL nodes, restart, consume
   local out="$ROOT/results/full-restart"; rm -rf "$out"; mkdir -p "$out"
   EVENTS="$out/events.csv"; echo "epoch_ms,type,detail" > "$EVENTS"
   local run="full-restart-$(date +%H%M%S)" count=5000
-  wait_cluster_healthy; reset_queue 1
+  wait_cluster_healthy || return 1; reset_queue 1 || return 1
   event publish "${WORKERS}x$count, no consumer"
   "$BIN/producer" -nodes "$NODE_URLS" -workers "$WORKERS" -count $count -run-id "$run" \
      -summary "$out/producer.json" 2> "$out/producer.log"
   event kill "rabbit1+rabbit2+rabbit3 (SIGKILL)"; kill_node 1; kill_node 2; kill_node 3
   sleep 5
   event start "all nodes"; start_node 1; start_node 2; start_node 3
-  wait_cluster_healthy; event healthy "cluster back"
+  wait_cluster_healthy || { event error "cluster did not recover"; return 1; }
+  event healthy "cluster back"
   "$BIN/consumer" -nodes "$NODE_URLS" -run-id "$run" -expect $((WORKERS * count)) -expect-per-producer $count \
      -idle-timeout 30s -summary "$out/consumer.json" 2> "$out/consumer.log"
   event consumed "exit=$?"

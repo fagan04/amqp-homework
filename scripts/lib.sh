@@ -11,7 +11,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MODE="${MODE:-docker}"
 BIN="$ROOT/bin"
 COMPOSE_NET="${COMPOSE_NET:-rabbitmq-cluster_rabbitnet}"
-NATIVE_CTL="${NATIVE_CTL:-/home/claude/native/ctl.sh}"
+NATIVE_CTL="${NATIVE_CTL:-$ROOT/scripts/native-harness/ctl.sh}"
 
 if [ "$MODE" = "docker" ]; then
   NODE_URLS="amqp://admin:admin@localhost:5672/,amqp://admin:admin@localhost:5673/,amqp://admin:admin@localhost:5674/"
@@ -86,6 +86,10 @@ except Exception: print(0)' 2>/dev/null)
 # known leader placement.
 reset_queue() {
   local n=$1 u; u=$(echo "$MGMT_URLS" | cut -d, -f"$n")
+  # Never delete/re-create the queue while a member is down: a member that
+  # misses the delete keeps its old Raft log and can later win an election
+  # with that stale data (observed in testing).
+  wait_cluster_healthy || { echo "refusing to reset queue: cluster not healthy" >&2; return 1; }
   curl -s -m 10 -u admin:admin -X DELETE "$u/api/queues/%2F/homework" >/dev/null || true
   curl -s -m 10 -u admin:admin -X PUT -H 'content-type: application/json' \
     -d '{"durable":true,"auto_delete":false,"arguments":{"x-queue-type":"quorum"}}' \

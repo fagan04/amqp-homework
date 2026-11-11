@@ -1,6 +1,6 @@
 epoch_ms,type,detail
-1794413499351,publish,4x5000, no consumer
-1794413500895,kill,rabbit1+rabbit2+rabbit3 (SIGKILL)
-1794413506197,start,all nodes
-1794413518802,healthy,cluster back
-1794413523361,consumed,exit=0
+1794431505043,publish,4x5000, no consumer
+1794431505619,kill,rabbit1+rabbit2+rabbit3 (SIGKILL)
+1794431511477,start,all nodes
+1794431518104,healthy,cluster back
+1794431519377,consumed,exit=0

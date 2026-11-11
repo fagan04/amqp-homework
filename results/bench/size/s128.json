@@ -2,17 +2,17 @@
   "all_confirmed": true,
   "confirm_latency": {
     "count": 40000,
-    "min_ms": 4.606,
-    "avg_ms": 32.806,
-    "p50_ms": 30.346,
-    "p95_ms": 58.924,
-    "p99_ms": 77.557,
-    "p999_ms": 100.201,
-    "max_ms": 102.82
+    "min_ms": 4.462,
+    "avg_ms": 15.482,
+    "p50_ms": 10.348,
+    "p95_ms": 49.864,
+    "p99_ms": 86.455,
+    "p999_ms": 101.068,
+    "max_ms": 104.664
   },
   "confirmed_total": 40000,
   "count_per_worker": 10000,
-  "elapsed_s": 2.765971595,
+  "elapsed_s": 1.2513446670000001,
   "expected_total": 40000,
   "inflight": 128,
   "nacked": 0,
@@ -23,6 +23,6 @@
   "run_id": "sz-128",
   "size_bytes": 128,
   "target_rate": 0,
-  "throughput_msg_s": 14461.464489478967,
+  "throughput_msg_s": 31965.613515496763,
   "workers": 4
 }

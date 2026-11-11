@@ -1,102 +1,102 @@
 {
   "ack_errors": 0,
-  "acked": 120140,
-  "duplicates": 140,
+  "acked": 120089,
+  "duplicates": 89,
   "e2e_latency": {
     "count": 120000,
-    "min_ms": 0.965,
-    "avg_ms": 5346.16,
-    "p50_ms": 7445.814,
-    "p95_ms": 8285.72,
-    "p99_ms": 8358.4,
-    "p999_ms": 30270.785,
-    "max_ms": 30424.727
+    "min_ms": 0.694,
+    "avg_ms": 578.512,
+    "p50_ms": 144.11,
+    "p95_ms": 1643.498,
+    "p99_ms": 1825.614,
+    "p999_ms": 1834.877,
+    "max_ms": 28019.767
   },
-  "elapsed_s": 64.962239817,
+  "elapsed_s": 61.110706541,
   "events": [
     {
-      "t_s": 0.003273101,
+      "t_s": 0.005852666,
       "type": "connected",
-      "node": "rabbit2:5672"
+      "node": "localhost:5673"
     },
     {
-      "t_s": 16.233402363,
+      "t_s": 16.073963208,
       "type": "failover",
-      "node": "rabbit2:5672",
-      "info": "Exception (501) Reason: \"read tcp 10.10.0.1:47830-\u003e10.10.0.12:5672: read: connection reset by peer\""
+      "node": "localhost:5673",
+      "info": "delivery channel closed"
     },
     {
-      "t_s": 16.437574797,
+      "t_s": 16.277960041,
       "type": "connected",
-      "node": "rabbit1:5672"
+      "node": "localhost:5674"
     },
     {
-      "t_s": 19.463895513,
+      "t_s": 16.385585916,
       "type": "failover",
-      "node": "rabbit1:5672",
-      "info": "Exception (501) Reason: \"read tcp 10.10.0.1:44276-\u003e10.10.0.11:5672: read: connection reset by peer\""
+      "node": "localhost:5674",
+      "info": "delivery channel closed"
     },
     {
-      "t_s": 42.425995218,
+      "t_s": 44.388296333,
       "type": "connected",
-      "node": "rabbit1:5672"
+      "node": "localhost:5672"
     },
     {
-      "t_s": 49.359279479,
+      "t_s": 47.402697208,
       "type": "switch_back",
-      "node": "rabbit2:5672",
-      "info": "from rabbit1:5672"
+      "node": "localhost:5673",
+      "info": "from localhost:5672"
     },
     {
-      "t_s": 49.424666133,
+      "t_s": 47.411171041,
       "type": "connected",
-      "node": "rabbit2:5672"
+      "node": "localhost:5673"
     }
   ],
   "expected_producers": 4,
   "failovers": 2,
   "foreign": 0,
-  "gaps_seen": 12,
+  "gaps_seen": 0,
   "missing_total": 0,
-  "out_of_order": 133,
+  "out_of_order": 0,
   "per_producer": {
-    "quorum-loss-200858-p0": {
-      "gaps_seen": 1,
+    "quorum-loss-010920-p0": {
+      "gaps_seen": 0,
       "max_seq": 30000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 16,
+      "out_of_order": 0,
       "unique": 30000
     },
-    "quorum-loss-200858-p1": {
-      "gaps_seen": 1,
+    "quorum-loss-010920-p1": {
+      "gaps_seen": 0,
       "max_seq": 30000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 25,
+      "out_of_order": 0,
       "unique": 30000
     },
-    "quorum-loss-200858-p2": {
-      "gaps_seen": 3,
+    "quorum-loss-010920-p2": {
+      "gaps_seen": 0,
       "max_seq": 30000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 44,
+      "out_of_order": 0,
       "unique": 30000
     },
-    "quorum-loss-200858-p3": {
-      "gaps_seen": 7,
+    "quorum-loss-010920-p3": {
+      "gaps_seen": 0,
       "max_seq": 30000,
       "missing_count": 0,
       "missing_sample": null,
-      "out_of_order": 48,
+      "out_of_order": 0,
       "unique": 30000
     }
   },
   "producers": 4,
-  "received": 120140,
-  "redelivered_flag": 298,
-  "run_id": "quorum-loss-200858",
+  "received": 120089,
+  "redelivered_flag": 202,
+  "run_id": "quorum-loss-010920",
   "switch_backs": 1,
   "unique": 120000,
   "zero_loss": true
