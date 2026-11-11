@@ -1,0 +1,92 @@
+{
+  "ack_errors": 0,
+  "acked": 160069,
+  "duplicates": 69,
+  "e2e_latency": {
+    "count": 160000,
+    "min_ms": 0.977,
+    "avg_ms": 21.69,
+    "p50_ms": 10.79,
+    "p95_ms": 76.796,
+    "p99_ms": 193.29,
+    "p999_ms": 306.849,
+    "max_ms": 403.125
+  },
+  "elapsed_s": 81.043470012,
+  "events": [
+    {
+      "t_s": 0.003797307,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    },
+    {
+      "t_s": 45.064413381,
+      "type": "failover",
+      "node": "rabbit2:5672",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 45.270778407,
+      "type": "connected",
+      "node": "rabbit3:5672"
+    },
+    {
+      "t_s": 69.311846963,
+      "type": "switch_back",
+      "node": "rabbit2:5672",
+      "info": "from rabbit3:5672"
+    },
+    {
+      "t_s": 69.328523803,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 1,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "rolling-restart-201003-p0": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-201003-p1": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-201003-p2": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-201003-p3": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    }
+  },
+  "producers": 4,
+  "received": 160069,
+  "redelivered_flag": 51,
+  "run_id": "rolling-restart-201003",
+  "switch_backs": 1,
+  "unique": 160000,
+  "zero_loss": true
+}

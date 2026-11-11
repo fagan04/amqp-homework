@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 160000,
+    "min_ms": 0.776,
+    "avg_ms": 9.248,
+    "p50_ms": 5.611,
+    "p95_ms": 25.098,
+    "p99_ms": 70.613,
+    "p999_ms": 200.034,
+    "max_ms": 247.91
+  },
+  "confirmed_total": 160000,
+  "count_per_worker": 40000,
+  "elapsed_s": 80.020693344,
+  "expected_total": 160000,
+  "inflight": 100,
+  "nacked": 0,
+  "published_calls": 160073,
+  "reconnects": 1,
+  "republished": 74,
+  "returned": 0,
+  "run_id": "partition-200615",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.482800182422,
+  "workers": 4
+}

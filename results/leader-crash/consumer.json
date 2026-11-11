@@ -1,0 +1,70 @@
+{
+  "ack_errors": 0,
+  "acked": 128000,
+  "duplicates": 0,
+  "e2e_latency": {
+    "count": 128000,
+    "min_ms": 1.201,
+    "avg_ms": 26.117,
+    "p50_ms": 9.411,
+    "p95_ms": 102.069,
+    "p99_ms": 357.789,
+    "p999_ms": 472.945,
+    "max_ms": 508.835
+  },
+  "elapsed_s": 65.041148709,
+  "events": [
+    {
+      "t_s": 0.004753881,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 0,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "leader-crash-200510-p0": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    },
+    "leader-crash-200510-p1": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    },
+    "leader-crash-200510-p2": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    },
+    "leader-crash-200510-p3": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    }
+  },
+  "producers": 4,
+  "received": 128000,
+  "redelivered_flag": 0,
+  "run_id": "leader-crash-200510",
+  "switch_backs": 0,
+  "unique": 128000,
+  "zero_loss": true
+}

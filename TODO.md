@@ -1,33 +1,32 @@
-# Remaining Tasks
+# Task status (HW2)
 
 ## 1. Producer and Consumer
-- [x] Improve connection handling and automatic reconnection.
-- [x] Implement switching back to Node 2 when it becomes available.
-- [x] Handle duplicate message delivery safely.
-- [x] Test publisher confirms and manual acknowledgments under failure conditions.
+- [x] Connection handling and automatic reconnection (failover dialer, backoff, 5 s write deadline)
+- [x] Switch back to Node 2 when it becomes available (probe + graceful drain)
+- [x] Handle duplicate message delivery safely (idempotent consumer)
+- [x] Publisher confirms and manual acknowledgments verified under failure conditions
+- [x] Multi-worker stress testing, structured logging, ordering/persistence validation
 
 ## 2. Cluster and Management
-- [x] Verify three-node RabbitMQ cluster configuration.
-- [x] Verify Quorum Queue replication and availability.
-- [x] Verify RabbitMQ Management UI.
-- [ ] Verify Prometheus and Grafana monitoring.
+- [x] Three-node RabbitMQ cluster configuration
+- [x] Quorum queue replication and availability
+- [x] RabbitMQ Management UI
+- [x] Prometheus (+ alert rules) and Grafana (classic-format provisioned dashboard, all queries validated)
+- [x] rabbit-init job: queue policy (delivery-limit 5 + DLQ)
 
 ## 3. Architecture Documentation
-- [ ] System Context diagram.
-- [ ] Container diagram.
-- [ ] Component diagram.
-- [ ] Deployment diagram.
+- [x] System Context, Container, Component (broker + clients), Deployment diagrams (docs/c4)
+- [x] Design document (docs/ARCHITECTURE.md)
 
 ## 4. Testing and Benchmarking
-- [ ] Test normal message publishing and consumption.
-- [ ] Test Node 2 failure and consumer failover to Node 3.
-- [ ] Test Node 2 recovery.
-- [ ] Test network partition behavior.
-- [ ] Measure message throughput.
-- [ ] Measure message latency.
+- [x] Normal publishing and consumption (baseline)
+- [x] Node 2 failure, consumer failover to Node 3, recovery + switch-back
+- [x] Leader crash / Raft leader election
+- [x] Network partition (follower and leader)
+- [x] Quorum loss (2 of 3 nodes), rolling restart, full-cluster crash persistence
+- [x] Throughput, message size, prefetch, latency-under-load benchmarks
 
 ## 5. Final Deliverables
-- [ ] Document architecture and implementation.
-- [ ] Document resilience and benchmark results.
-- [ ] Prepare final report.
-- [ ] Organize repository for submission.
+- [x] docs/REPORT.md (resilience & benchmark report), results/ raw data, docs/charts
+- [ ] Re-run `scripts/chaos.sh all` + `scripts/bench.sh all` on the Docker setup (MODE=docker) and attach Grafana screenshots
+- [ ] Final presentation

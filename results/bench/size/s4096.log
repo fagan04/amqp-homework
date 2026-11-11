@@ -1,0 +1,15 @@
+{"time":"2026-11-11T20:13:07.928153883+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-4096","node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:13:07.929495148+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"sz-4096","workers":4,"count_per_worker":10000,"rate":0,"size":4096,"inflight":128,"nodes":3}
+{"time":"2026-11-11T20:13:07.934480442+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-4096","worker":1,"node":"rabbit2:5672","attempt":1}
+{"time":"2026-11-11T20:13:07.938982597+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-4096","worker":0,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:13:07.941906795+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-4096","worker":3,"node":"rabbit1:5672","attempt":1}
+{"time":"2026-11-11T20:13:07.973180485+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-4096","worker":2,"node":"rabbit3:5672","attempt":1}
+{"time":"2026-11-11T20:13:08.930343841+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-4096","t_s":1,"confirmed":11077,"confirmed_per_s":11077,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:13:09.930627228+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-4096","t_s":2,"confirmed":20655,"confirmed_per_s":9578,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:13:10.930046183+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-4096","t_s":3,"confirmed":29007,"confirmed_per_s":8352,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:13:11.138961537+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-4096","worker":1,"confirmed":10000}
+{"time":"2026-11-11T20:13:11.931070943+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-4096","t_s":4,"confirmed":37333,"confirmed_per_s":8326,"republished":0,"reconnects":0}
+{"time":"2026-11-11T20:13:12.241060297+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-4096","worker":2,"confirmed":10000}
+{"time":"2026-11-11T20:13:12.243295314+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-4096","worker":0,"confirmed":10000}
+{"time":"2026-11-11T20:13:12.287461532+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-4096","worker":3,"confirmed":10000}
+{"time":"2026-11-11T20:13:12.290713821+04:00","level":"INFO","msg":"done","component":"producer","run_id":"sz-4096","summary":{"all_confirmed":true,"confirm_latency":{"count":40000,"min_ms":6.345,"avg_ms":51.282,"p50_ms":47.807,"p95_ms":88.25,"p99_ms":113.818,"p999_ms":139.595,"max_ms":159.248},"confirmed_total":40000,"count_per_worker":10000,"elapsed_s":4.35794981,"expected_total":40000,"inflight":128,"nacked":0,"published_calls":40000,"reconnects":0,"republished":0,"returned":0,"run_id":"sz-4096","size_bytes":4096,"target_rate":0,"throughput_msg_s":9178.627965887474,"workers":4}}

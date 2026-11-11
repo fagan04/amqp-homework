@@ -1,0 +1,92 @@
+{
+  "ack_errors": 0,
+  "acked": 160098,
+  "duplicates": 98,
+  "e2e_latency": {
+    "count": 160000,
+    "min_ms": 0.838,
+    "avg_ms": 2197.038,
+    "p50_ms": 20.653,
+    "p95_ms": 12098.236,
+    "p99_ms": 12465.418,
+    "p999_ms": 17694.217,
+    "max_ms": 18391.753
+  },
+  "elapsed_s": 81.041079558,
+  "events": [
+    {
+      "t_s": 0.004391392,
+      "type": "connected",
+      "node": "rabbit3:5672"
+    },
+    {
+      "t_s": 23.732753506,
+      "type": "failover",
+      "node": "rabbit3:5672",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 23.937277265,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    },
+    {
+      "t_s": 60.996157748,
+      "type": "switch_back",
+      "node": "rabbit3:5672",
+      "info": "from rabbit2:5672"
+    },
+    {
+      "t_s": 61.009166538,
+      "type": "connected",
+      "node": "rabbit3:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 1,
+  "foreign": 0,
+  "gaps_seen": 5,
+  "missing_total": 0,
+  "out_of_order": 99,
+  "per_producer": {
+    "partition-leader-200737-p0": {
+      "gaps_seen": 2,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 26,
+      "unique": 40000
+    },
+    "partition-leader-200737-p1": {
+      "gaps_seen": 1,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 6,
+      "unique": 40000
+    },
+    "partition-leader-200737-p2": {
+      "gaps_seen": 1,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 1,
+      "unique": 40000
+    },
+    "partition-leader-200737-p3": {
+      "gaps_seen": 1,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 66,
+      "unique": 40000
+    }
+  },
+  "producers": 4,
+  "received": 160098,
+  "redelivered_flag": 124,
+  "run_id": "partition-leader-200737",
+  "switch_backs": 1,
+  "unique": 160000,
+  "zero_loss": true
+}

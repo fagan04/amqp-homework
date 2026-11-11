@@ -1,0 +1,23 @@
+@startuml
+!include <C4/C4_Context>
+LAYOUT_TOP_DOWN()
+title System Context - Distributed AMQP Messaging Cluster (INFT 6000 HW2)
+
+Person(operator, "Operator / SRE", "Deploys the cluster, watches health, runs chaos and benchmark tests")
+System_Ext(producers, "Producer applications", "Go multi-worker publishers (amqp091-go). Publish persistent messages with publisher confirms")
+System_Ext(consumers, "Consumer applications", "Go validating consumers. Manual acks, idempotent processing, failover + switch-back")
+
+System(cluster, "RabbitMQ Messaging Cluster", "3-node RabbitMQ 4.1 cluster. Durable quorum queue 'homework' replicated with Raft. pause_minority partition handling")
+System(monitoring, "Monitoring & Alerting", "Prometheus (5 s scrape, alert rules) + Grafana dashboard 'RabbitMQ Cluster - HW2'")
+System_Ext(chaos, "Chaos & Benchmark Toolkit", "scripts/chaos.sh, scripts/bench.sh, clustermon: inject node crashes / partitions and measure recovery")
+
+Rel(producers, cluster, "Publishes messages, receives confirms", "AMQP 0-9-1 :5672-5674")
+Rel(cluster, consumers, "Delivers messages, receives acks", "AMQP 0-9-1 :5672-5674")
+Rel(monitoring, cluster, "Scrapes node, queue and Raft metrics", "HTTP :15692 /metrics")
+Rel(operator, cluster, "Manages queues, policies, users", "Management UI / HTTP API :15672-15674, rabbitmqctl")
+Rel(operator, monitoring, "Views dashboards and alerts", "HTTPS/HTTP :3000, :9090")
+Rel(operator, chaos, "Runs tests")
+Rel(chaos, cluster, "Kills / partitions / restarts nodes, polls leader state", "docker CLI, HTTP API")
+Rel(chaos, producers, "Starts with load profile")
+Rel(chaos, consumers, "Starts and validates")
+@enduml

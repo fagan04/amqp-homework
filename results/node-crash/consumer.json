@@ -1,0 +1,92 @@
+{
+  "ack_errors": 0,
+  "acked": 128097,
+  "duplicates": 97,
+  "e2e_latency": {
+    "count": 128000,
+    "min_ms": 0.995,
+    "avg_ms": 179.148,
+    "p50_ms": 11.813,
+    "p95_ms": 1612.767,
+    "p99_ms": 2961.475,
+    "p999_ms": 3107.209,
+    "max_ms": 3224.668
+  },
+  "elapsed_s": 65.048599239,
+  "events": [
+    {
+      "t_s": 0.004256067,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    },
+    {
+      "t_s": 16.212282154,
+      "type": "failover",
+      "node": "rabbit2:5672",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 16.423259615,
+      "type": "connected",
+      "node": "rabbit3:5672"
+    },
+    {
+      "t_s": 46.441903922,
+      "type": "switch_back",
+      "node": "rabbit2:5672",
+      "info": "from rabbit3:5672"
+    },
+    {
+      "t_s": 46.45547309,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 1,
+  "foreign": 0,
+  "gaps_seen": 1,
+  "missing_total": 0,
+  "out_of_order": 12,
+  "per_producer": {
+    "node-crash-200404-p0": {
+      "gaps_seen": 1,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 12,
+      "unique": 32000
+    },
+    "node-crash-200404-p1": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    },
+    "node-crash-200404-p2": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    },
+    "node-crash-200404-p3": {
+      "gaps_seen": 0,
+      "max_seq": 32000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 32000
+    }
+  },
+  "producers": 4,
+  "received": 128097,
+  "redelivered_flag": 233,
+  "run_id": "node-crash-200404",
+  "switch_backs": 1,
+  "unique": 128000,
+  "zero_loss": true
+}

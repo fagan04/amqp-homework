@@ -1,0 +1,70 @@
+{
+  "ack_errors": 0,
+  "acked": 160000,
+  "duplicates": 0,
+  "e2e_latency": {
+    "count": 160000,
+    "min_ms": 6.798,
+    "avg_ms": 13468.476,
+    "p50_ms": 16229.89,
+    "p95_ms": 16613.252,
+    "p99_ms": 16701.087,
+    "p999_ms": 16721.439,
+    "max_ms": 16733.718
+  },
+  "elapsed_s": 36.794824663,
+  "events": [
+    {
+      "t_s": 0.004365356,
+      "type": "connected",
+      "node": "rabbit1:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 0,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "lat-8000-p0": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p1": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p2": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p3": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    }
+  },
+  "producers": 4,
+  "received": 160000,
+  "redelivered_flag": 0,
+  "run_id": "lat-8000",
+  "switch_backs": 0,
+  "unique": 160000,
+  "zero_loss": true
+}

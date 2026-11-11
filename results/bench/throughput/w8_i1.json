@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 12000,
+    "min_ms": 0.893,
+    "avg_ms": 3.536,
+    "p50_ms": 3.239,
+    "p95_ms": 5.799,
+    "p99_ms": 8.84,
+    "p999_ms": 43.095,
+    "max_ms": 47.3
+  },
+  "confirmed_total": 12000,
+  "count_per_worker": 1500,
+  "elapsed_s": 5.64919859,
+  "expected_total": 12000,
+  "inflight": 1,
+  "nacked": 0,
+  "published_calls": 12000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "tp-8-1",
+  "size_bytes": 512,
+  "target_rate": 0,
+  "throughput_msg_s": 2124.1951064071195,
+  "workers": 8
+}

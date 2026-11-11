@@ -1,0 +1,103 @@
+{
+  "ack_errors": 0,
+  "acked": 120140,
+  "duplicates": 140,
+  "e2e_latency": {
+    "count": 120000,
+    "min_ms": 0.965,
+    "avg_ms": 5346.16,
+    "p50_ms": 7445.814,
+    "p95_ms": 8285.72,
+    "p99_ms": 8358.4,
+    "p999_ms": 30270.785,
+    "max_ms": 30424.727
+  },
+  "elapsed_s": 64.962239817,
+  "events": [
+    {
+      "t_s": 0.003273101,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    },
+    {
+      "t_s": 16.233402363,
+      "type": "failover",
+      "node": "rabbit2:5672",
+      "info": "Exception (501) Reason: \"read tcp 10.10.0.1:47830-\u003e10.10.0.12:5672: read: connection reset by peer\""
+    },
+    {
+      "t_s": 16.437574797,
+      "type": "connected",
+      "node": "rabbit1:5672"
+    },
+    {
+      "t_s": 19.463895513,
+      "type": "failover",
+      "node": "rabbit1:5672",
+      "info": "Exception (501) Reason: \"read tcp 10.10.0.1:44276-\u003e10.10.0.11:5672: read: connection reset by peer\""
+    },
+    {
+      "t_s": 42.425995218,
+      "type": "connected",
+      "node": "rabbit1:5672"
+    },
+    {
+      "t_s": 49.359279479,
+      "type": "switch_back",
+      "node": "rabbit2:5672",
+      "info": "from rabbit1:5672"
+    },
+    {
+      "t_s": 49.424666133,
+      "type": "connected",
+      "node": "rabbit2:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 2,
+  "foreign": 0,
+  "gaps_seen": 12,
+  "missing_total": 0,
+  "out_of_order": 133,
+  "per_producer": {
+    "quorum-loss-200858-p0": {
+      "gaps_seen": 1,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 16,
+      "unique": 30000
+    },
+    "quorum-loss-200858-p1": {
+      "gaps_seen": 1,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 25,
+      "unique": 30000
+    },
+    "quorum-loss-200858-p2": {
+      "gaps_seen": 3,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 44,
+      "unique": 30000
+    },
+    "quorum-loss-200858-p3": {
+      "gaps_seen": 7,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 48,
+      "unique": 30000
+    }
+  },
+  "producers": 4,
+  "received": 120140,
+  "redelivered_flag": 298,
+  "run_id": "quorum-loss-200858",
+  "switch_backs": 1,
+  "unique": 120000,
+  "zero_loss": true
+}

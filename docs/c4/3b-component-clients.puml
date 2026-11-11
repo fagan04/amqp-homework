@@ -1,0 +1,43 @@
+@startuml
+!include <C4/C4_Component>
+LAYOUT_LEFT_RIGHT()
+title Component Diagram (b) - Producer and Consumer client modules
+
+ContainerDb_Ext(cluster, "RabbitMQ cluster", "rabbit1-3 :5672-5674")
+
+Container_Boundary(p, "Producer (producer/main.go)") {
+  Component(pool, "Worker / Channel Pool", "goroutines", "-workers N; each worker owns one connection + confirm-mode channel, spread round-robin over nodes")
+  Component(rate, "Rate Limiter", "per-worker ticker", "-rate total msg/s split across workers")
+  Component(win, "Confirm Window", "pending []*outMsg", "-inflight unconfirmed msgs; per-producer seq numbers; PublishWithDeferredConfirm")
+  Component(retry, "Retry Handler", "worker.run", "nack -> back off 250 ms, fresh channel same node; connection lost -> next node; re-publish window in order")
+  Component(pstats, "Stats & Logs", "internal/stats, log/slog", "JSON logs, per-second CSV, confirm latency percentiles, summary JSON")
+}
+Container_Boundary(shared, "internal/amqpx") {
+  Component(dialer, "Failover Dialer", "amqpx.Dialer", "Round-robin over node list, 3 s dial timeout, 5 s heartbeat, exponential backoff 250 ms -> 5 s")
+  Component(topo, "Topology Declarer", "DeclareTopology", "Durable quorum queue homework + homework.dlq")
+}
+Container_Boundary(c, "Consumer (consumer/main.go)") {
+  Component(sess, "Session Manager", "consumeFrom", "Preferred order rabbit2 -> rabbit3 -> rabbit1; prefetch QoS; manual ack")
+  Component(probe, "Switch-back Prober", "goroutine", "Every 3 s: TCP + AMQP probe of preferred node; graceful cancel + drain, then reconnect")
+  Component(dedup, "Idempotency Store", "map[producer][seq]", "Duplicates acked without re-processing")
+  Component(valid, "Validator", "validator", "Ordering, gaps, missing (loss) per producer; zero_loss verdict")
+  Component(cstats, "Latency & Stats", "stats.Recorder", "End-to-end latency from sent_ts_ns header; per-second CSV")
+}
+
+Rel(pool, rate, "paces")
+Rel(pool, win, "fills")
+Rel(win, retry, "nack / close")
+Rel(pool, dialer, "connect")
+Rel(retry, dialer, "reconnect")
+Rel(win, cluster, "basic.publish (persistent, mandatory)", "AMQP")
+Rel(cluster, win, "basic.ack / basic.nack")
+Rel(pool, pstats, "metrics")
+Rel(sess, dialer, "connect / failover")
+Rel(sess, topo, "declare")
+Rel(cluster, sess, "basic.deliver", "AMQP")
+Rel(sess, cluster, "basic.ack", "AMQP")
+Rel(sess, dedup, "check")
+Rel(dedup, valid, "first-seen messages")
+Rel(valid, cstats, "latency")
+Rel(probe, sess, "switch-back signal")
+@enduml

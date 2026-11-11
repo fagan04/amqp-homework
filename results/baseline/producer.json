@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 40000,
+    "min_ms": 1.046,
+    "avg_ms": 16.695,
+    "p50_ms": 12.129,
+    "p95_ms": 45.449,
+    "p99_ms": 95.005,
+    "p999_ms": 163.951,
+    "max_ms": 208.655
+  },
+  "confirmed_total": 40000,
+  "count_per_worker": 10000,
+  "elapsed_s": 20.031563982,
+  "expected_total": 40000,
+  "inflight": 100,
+  "nacked": 0,
+  "published_calls": 40000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "baseline-200343",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1996.848575375506,
+  "workers": 4
+}

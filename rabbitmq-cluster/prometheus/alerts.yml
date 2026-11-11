@@ -1,0 +1,42 @@
+groups:
+  - name: rabbitmq-cluster
+    rules:
+      - alert: RabbitMQNodeDown
+        expr: up{job="rabbitmq"} == 0
+        for: 15s
+        labels: {severity: critical}
+        annotations:
+          summary: "RabbitMQ node {{ $labels.instance }} is down or unreachable"
+
+      - alert: RabbitMQClusterDegraded
+        expr: count(up{job="rabbitmq"} == 1) < 3
+        for: 15s
+        labels: {severity: warning}
+        annotations:
+          summary: "Only {{ $value }} of 3 RabbitMQ nodes are up (quorum needs 2)"
+
+      - alert: RabbitMQQuorumLost
+        expr: count(up{job="rabbitmq"} == 1) < 2
+        for: 10s
+        labels: {severity: critical}
+        annotations:
+          summary: "Quorum lost: quorum queues cannot accept or deliver messages"
+
+      - alert: RabbitMQQueueBacklog
+        expr: sum(rabbitmq_queue_messages_ready) > 50000
+        for: 1m
+        labels: {severity: warning}
+        annotations:
+          summary: "Queue backlog above 50k ready messages - consumers too slow"
+
+      - alert: RabbitMQMemoryAlarm
+        expr: max(rabbitmq_alarms_memory_used_watermark) > 0
+        labels: {severity: critical}
+        annotations:
+          summary: "Memory alarm raised - publishers are being blocked"
+
+      - alert: RabbitMQDiskAlarm
+        expr: max(rabbitmq_alarms_free_disk_space_watermark) > 0
+        labels: {severity: critical}
+        annotations:
+          summary: "Disk alarm raised - publishers are being blocked"

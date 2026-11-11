@@ -1,0 +1,42 @@
+@startuml
+!include <C4/C4_Container>
+LAYOUT_LEFT_RIGHT()
+title Container Diagram - RabbitMQ cluster, Raft sync layer and monitoring
+
+Person(operator, "Operator / SRE")
+Container(producer, "Producer", "Go, amqp091-go", "N workers, 1 connection+channel each, confirm window, failover dialer")
+Container(consumer, "Consumer", "Go, amqp091-go", "Prefetch 100, manual ack, dedup + order/loss validator, switch-back prober")
+Container(clustermon, "clustermon", "Go", "Polls /api/queues every 250 ms: leader, online members, node up/down")
+
+System_Boundary(c1, "RabbitMQ Messaging Cluster (docker network rabbitnet)") {
+  Container(r1, "rabbit1", "RabbitMQ 4.1 / Erlang", "AMQP, Management UI, Prometheus exporter. Seed node")
+  Container(r2, "rabbit2", "RabbitMQ 4.1 / Erlang", "AMQP, Management UI, Prometheus exporter. Consumer's preferred node")
+  Container(r3, "rabbit3", "RabbitMQ 4.1 / Erlang", "AMQP, Management UI, Prometheus exporter")
+  ContainerQueue(qq, "Quorum queue 'homework' (+ homework.dlq)", "Ra / Raft", "1 leader + 2 followers across rabbit1-3. Commit = majority (2/3) fsync. Policy: delivery-limit 5 -> DLQ")
+  Container(init, "rabbit-init", "rabbitmqctl (one-shot)", "await_online_nodes 3, apply policy homework-qq")
+}
+System_Boundary(c2, "Monitoring") {
+  Container(prom, "Prometheus", "prom/prometheus v3.5", "Scrapes 3 nodes every 5 s (+ per-object 15 s), evaluates 6 alert rules")
+  Container(graf, "Grafana", "grafana 12.1", "Provisioned datasource + 17-panel dashboard")
+}
+
+Rel(producer, r1, "publish + confirms", "AMQP :5672")
+Rel(producer, r2, "failover", "AMQP :5673")
+Rel(producer, r3, "failover", "AMQP :5674")
+Rel(consumer, r2, "consume + ack (preferred)", "AMQP :5673")
+Rel(consumer, r3, "failover", "AMQP :5674")
+Rel(r1, qq, "hosts replica")
+Rel(r2, qq, "hosts replica")
+Rel(r3, qq, "hosts replica")
+BiRel(r1, r2, "Erlang distribution + Raft log replication", "TCP 25672, epmd 4369")
+BiRel(r2, r3, "Erlang distribution + Raft", "TCP 25672")
+BiRel(r1, r3, "Erlang distribution + Raft", "TCP 25672")
+Rel(init, r1, "set_policy", "Erlang dist 25672")
+Rel(prom, r1, "scrape", "HTTP :15692")
+Rel(prom, r2, "scrape", "HTTP :15692")
+Rel(prom, r3, "scrape", "HTTP :15692")
+Rel(graf, prom, "PromQL", "HTTP :9090")
+Rel(operator, graf, "dashboards", "HTTP :3000")
+Rel(operator, r1, "Management UI", "HTTP :15672")
+Rel(clustermon, r1, "GET /api/queues", "HTTP :15672-15674")
+@enduml
