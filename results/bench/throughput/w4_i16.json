@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 48000,
+    "min_ms": 1.892,
+    "avg_ms": 4.06,
+    "p50_ms": 3.638,
+    "p95_ms": 6.725,
+    "p99_ms": 11.523,
+    "p999_ms": 29.899,
+    "max_ms": 34.602
+  },
+  "confirmed_total": 48000,
+  "count_per_worker": 12000,
+  "elapsed_s": 3.197013084,
+  "expected_total": 48000,
+  "inflight": 16,
+  "nacked": 0,
+  "published_calls": 48000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "tp-4-16",
+  "size_bytes": 512,
+  "target_rate": 0,
+  "throughput_msg_s": 15014.014249808431,
+  "workers": 4
+}

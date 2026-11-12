@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 128000,
+    "min_ms": 0.837,
+    "avg_ms": 5.336,
+    "p50_ms": 2.647,
+    "p95_ms": 10.861,
+    "p99_ms": 48.408,
+    "p999_ms": 269.877,
+    "max_ms": 313.127
+  },
+  "confirmed_total": 128000,
+  "count_per_worker": 32000,
+  "elapsed_s": 64.01194625,
+  "expected_total": 128000,
+  "inflight": 100,
+  "nacked": 1,
+  "published_calls": 128004,
+  "reconnects": 1,
+  "republished": 4,
+  "returned": 0,
+  "run_id": "node-crash-235824",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.6267493585233,
+  "workers": 4
+}

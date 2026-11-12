@@ -1,0 +1,11 @@
+{"time":"2026-11-12T00:54:43.80258+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-1024","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:43.805359+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"sz-1024","workers":4,"count_per_worker":10000,"rate":0,"size":1024,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:54:43.809748+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-1024","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:43.809768+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-1024","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:43.810336+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-1024","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:43.81354+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-1024","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:44.596875+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-1024","worker":2,"confirmed":10000}
+{"time":"2026-11-12T00:54:44.663686+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-1024","worker":1,"confirmed":10000}
+{"time":"2026-11-12T00:54:44.702337+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-1024","worker":0,"confirmed":10000}
+{"time":"2026-11-12T00:54:44.704165+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-1024","worker":3,"confirmed":10000}
+{"time":"2026-11-12T00:54:44.707746+04:00","level":"INFO","msg":"done","component":"producer","run_id":"sz-1024","summary":{"all_confirmed":true,"confirm_latency":{"count":40000,"min_ms":3.062,"avg_ms":10.877,"p50_ms":10.561,"p95_ms":15.829,"p99_ms":19.691,"p999_ms":25.445,"max_ms":25.478},"confirmed_total":40000,"count_per_worker":10000,"elapsed_s":0.898776084,"expected_total":40000,"inflight":128,"nacked":0,"published_calls":40000,"reconnects":0,"republished":0,"returned":0,"run_id":"sz-1024","size_bytes":1024,"target_rate":0,"throughput_msg_s":44504.96704582985,"workers":4}}

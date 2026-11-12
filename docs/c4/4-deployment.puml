@@ -1,0 +1,50 @@
+@startuml
+!include <C4/C4_Deployment>
+LAYOUT_TOP_DOWN()
+title Deployment Diagram - docker compose on a single Docker host
+
+Deployment_Node(host, "Developer laptop / Docker host", "macOS or Linux, Docker Engine + Compose v2") {
+  Deployment_Node(hostproc, "Host processes", "Go 1.22+ binaries") {
+    Container(prod, "producer", "Go", "connects localhost:5672-5674")
+    Container(cons, "consumer", "Go", "connects localhost:5673,5674,5672")
+    Container(mon, "clustermon + chaos.sh", "Go / bash", "localhost:15672-15674, docker CLI")
+  }
+  Deployment_Node(net, "Docker bridge network: rabbitmq-cluster_rabbitnet", "Internal DNS: rabbit1, rabbit2, rabbit3, prometheus, grafana") {
+    Deployment_Node(c1, "container rabbit1", "rabbitmq:4.1-management") {
+      Container(n1, "rabbit@rabbit1", "RabbitMQ", "5672->5672 AMQP | 15672->15672 HTTP | 15692 metrics* | 25672 dist* | 4369 epmd*  ; vol rabbit1_data:/var/lib/rabbitmq ; rabbitmq.conf:ro")
+    }
+    Deployment_Node(c2, "container rabbit2", "rabbitmq:4.1-management") {
+      Container(n2, "rabbit@rabbit2", "RabbitMQ", "5673->5672 | 15673->15672 | 15692* | 25672* | 4369* ; vol rabbit2_data")
+    }
+    Deployment_Node(c3, "container rabbit3", "rabbitmq:4.1-management") {
+      Container(n3, "rabbit@rabbit3", "RabbitMQ", "5674->5672 | 15674->15672 | 15692* | 25672* | 4369* ; vol rabbit3_data")
+    }
+    Deployment_Node(ci, "container rabbit-init", "one-shot, exits 0") {
+      Container(ini, "init.sh", "rabbitmqctl", "await_online_nodes 3; set_policy")
+    }
+    Deployment_Node(cp, "container prometheus", "prom/prometheus:v3.5.0") {
+      Container(pr, "Prometheus", "TSDB", "9090->9090 ; vol prometheus_data:/prometheus ; prometheus.yml + alerts.yml :ro")
+    }
+    Deployment_Node(cg, "container grafana", "grafana/grafana:12.1.0") {
+      Container(gr, "Grafana", "UI", "3000->3000 ; vol grafana_data ; provisioning + dashboards bind mounts")
+    }
+  }
+}
+note bottom of net
+  Ports marked * are internal-only (not published to the host).
+  Shared ERLANG_COOKIE from .env authenticates Erlang distribution
+  Start order via healthchecks: rabbit1 -> rabbit2 -> rabbit3 -> init, prometheus -> grafana
+end note
+
+Rel(prod, n1, "AMQP", "localhost:5672")
+Rel(cons, n2, "AMQP", "localhost:5673")
+Rel(mon, n1, "HTTP API", "localhost:15672")
+BiRel(n1, n2, "Erlang dist / Raft", "25672")
+BiRel(n2, n3, "Erlang dist / Raft", "25672")
+BiRel(n1, n3, "Erlang dist / Raft", "25672")
+Rel(pr, n1, "scrape", "15692")
+Rel(pr, n2, "scrape", "15692")
+Rel(pr, n3, "scrape", "15692")
+Rel(gr, pr, "PromQL", "9090")
+Rel(ini, n1, "rabbitmqctl", "25672")
+@enduml

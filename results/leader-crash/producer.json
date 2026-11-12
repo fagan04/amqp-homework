@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 128000,
+    "min_ms": 0.84,
+    "avg_ms": 7.484,
+    "p50_ms": 3.197,
+    "p95_ms": 14.683,
+    "p99_ms": 128.636,
+    "p999_ms": 321.8,
+    "max_ms": 444.746
+  },
+  "confirmed_total": 128000,
+  "count_per_worker": 32000,
+  "elapsed_s": 64.0052145,
+  "expected_total": 128000,
+  "inflight": 100,
+  "nacked": 2,
+  "published_calls": 128034,
+  "reconnects": 2,
+  "republished": 34,
+  "returned": 0,
+  "run_id": "leader-crash-235930",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.837060150779,
+  "workers": 4
+}

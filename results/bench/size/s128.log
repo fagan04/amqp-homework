@@ -1,0 +1,12 @@
+{"time":"2026-11-12T00:54:42.475882+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-128","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:42.491264+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"sz-128","workers":4,"count_per_worker":10000,"rate":0,"size":128,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:54:42.499446+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-128","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:42.502799+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-128","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:42.503504+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-128","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:42.505667+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"sz-128","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:43.491663+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"sz-128","t_s":1,"confirmed":26933,"confirmed_per_s":26933,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:54:43.660642+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-128","worker":2,"confirmed":10000}
+{"time":"2026-11-12T00:54:43.727594+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-128","worker":1,"confirmed":10000}
+{"time":"2026-11-12T00:54:43.74264+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-128","worker":0,"confirmed":10000}
+{"time":"2026-11-12T00:54:43.742777+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"sz-128","worker":3,"confirmed":10000}
+{"time":"2026-11-12T00:54:43.745863+04:00","level":"INFO","msg":"done","component":"producer","run_id":"sz-128","summary":{"all_confirmed":true,"confirm_latency":{"count":40000,"min_ms":4.462,"avg_ms":15.482,"p50_ms":10.348,"p95_ms":49.864,"p99_ms":86.455,"p999_ms":101.068,"max_ms":104.664},"confirmed_total":40000,"count_per_worker":10000,"elapsed_s":1.2513446670000001,"expected_total":40000,"inflight":128,"nacked":0,"published_calls":40000,"reconnects":0,"republished":0,"returned":0,"run_id":"sz-128","size_bytes":128,"target_rate":0,"throughput_msg_s":31965.613515496763,"workers":4}}

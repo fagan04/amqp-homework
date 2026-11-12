@@ -1,0 +1,7 @@
+epoch_ms,type,detail
+1794431195859,leader,rabbit1
+1794431196919,load_start,rate=2000 workers=4 count=40000
+1794431211998,partition,rabbit3
+1794431252300,heal,rabbit3
+1794431277118,producer_done,exit=0
+1794431277146,consumer_done,exit=0

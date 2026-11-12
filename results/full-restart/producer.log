@@ -1,0 +1,11 @@
+{"time":"2026-11-12T01:11:45.139396+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"full-restart-011144","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T01:11:45.140811+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"full-restart-011144","workers":4,"count_per_worker":5000,"rate":0,"size":512,"inflight":100,"nodes":3}
+{"time":"2026-11-12T01:11:45.14519+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"full-restart-011144","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T01:11:45.145228+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"full-restart-011144","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T01:11:45.1483+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"full-restart-011144","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T01:11:45.149081+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"full-restart-011144","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T01:11:45.540563+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"full-restart-011144","worker":3,"confirmed":5000}
+{"time":"2026-11-12T01:11:45.548037+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"full-restart-011144","worker":0,"confirmed":5000}
+{"time":"2026-11-12T01:11:45.595552+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"full-restart-011144","worker":2,"confirmed":5000}
+{"time":"2026-11-12T01:11:45.596769+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"full-restart-011144","worker":1,"confirmed":5000}
+{"time":"2026-11-12T01:11:45.597992+04:00","level":"INFO","msg":"done","component":"producer","run_id":"full-restart-011144","summary":{"all_confirmed":true,"confirm_latency":{"count":20000,"min_ms":3.284,"avg_ms":8.376,"p50_ms":8.131,"p95_ms":11.998,"p99_ms":15.101,"p999_ms":22.81,"max_ms":22.858},"confirmed_total":20000,"count_per_worker":5000,"elapsed_s":0.45593125,"expected_total":20000,"inflight":100,"nacked":0,"published_calls":20000,"reconnects":0,"republished":0,"returned":0,"run_id":"full-restart-011144","size_bytes":512,"target_rate":0,"throughput_msg_s":43866.26273149734,"workers":4}}

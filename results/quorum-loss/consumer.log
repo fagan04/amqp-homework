@@ -1,0 +1,111 @@
+{"time":"2026-11-12T01:09:20.50544+04:00","level":"INFO","msg":"connected","component":"consumer","node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T01:09:20.509723+04:00","level":"INFO","msg":"consuming","component":"consumer","node":"localhost:5673","prefetch":100}
+{"time":"2026-11-12T01:09:21.501765+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":1,"unique":0,"unique_per_s":0,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:22.500385+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":2,"unique":1792,"unique_per_s":1792,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:23.500487+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":3,"unique":3792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:24.500464+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":4,"unique":5792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:25.500452+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":5,"unique":7792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:26.500484+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":6,"unique":9792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:27.50048+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":7,"unique":11792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:28.500513+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":8,"unique":13792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:29.500477+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":9,"unique":15792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:30.500414+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":10,"unique":17792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:31.500483+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":11,"unique":19792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:32.500517+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":12,"unique":21792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:33.500511+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":13,"unique":23792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:34.500573+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":14,"unique":25792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:35.500605+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":15,"unique":27792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:36.500538+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":16,"unique":29792,"unique_per_s":2000,"duplicates":0,"redelivered":0,"node":"localhost:5673"}
+{"time":"2026-11-12T01:09:36.573859+04:00","level":"WARN","msg":"delivery channel closed, failing over","component":"consumer","node":"localhost:5673"}
+{"time":"2026-11-12T01:09:36.777824+04:00","level":"INFO","msg":"connected","component":"consumer","node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T01:09:36.781509+04:00","level":"INFO","msg":"consuming","component":"consumer","node":"localhost:5674","prefetch":100}
+{"time":"2026-11-12T01:09:36.885429+04:00","level":"WARN","msg":"delivery channel closed, failing over","component":"consumer","node":"localhost:5674"}
+{"time":"2026-11-12T01:09:37.087003+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53600->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:37.087795+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:37.088585+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"Exception (501) Reason: \"read tcp [::1]:53603->[::1]:5674: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:37.088634+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":250}
+{"time":"2026-11-12T01:09:37.34176+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53629->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:37.342911+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:37.343785+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:37.343844+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":500}
+{"time":"2026-11-12T01:09:37.501778+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":17,"unique":30548,"unique_per_s":756,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:37.847609+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53664->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:37.848813+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:37.849735+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:37.849809+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":1000}
+{"time":"2026-11-12T01:09:38.501533+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":18,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:38.852794+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53709->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:38.854053+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:38.855024+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:38.855093+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":2000}
+{"time":"2026-11-12T01:09:39.501776+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":19,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:40.501164+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":20,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:40.858222+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53774->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:40.859088+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:40.860318+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:40.860426+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":4000}
+{"time":"2026-11-12T01:09:41.501419+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":21,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:42.501583+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":22,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:43.501673+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":23,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:44.501861+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":24,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:44.863907+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:53880->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:44.865095+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:44.866012+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:44.866069+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":5000}
+{"time":"2026-11-12T01:09:45.501686+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":25,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:46.501554+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":26,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:47.501888+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":27,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:48.501805+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":28,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:49.501864+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":29,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:49.871155+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:54005->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:49.872686+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:49.873542+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:49.8736+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":5000}
+{"time":"2026-11-12T01:09:50.50199+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":30,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:51.501939+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":31,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:52.50193+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":32,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:53.50166+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":33,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:54.50193+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":34,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:54.876102+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:54130->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:54.876681+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"dial tcp [::1]:5673: connect: connection refused"}
+{"time":"2026-11-12T01:09:54.877091+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:54.877118+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":5000}
+{"time":"2026-11-12T01:09:55.501929+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":35,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:56.501964+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":36,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:57.501682+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":37,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:58.50159+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":38,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:59.501468+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":39,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:09:59.879407+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5672","err":"Exception (501) Reason: \"read tcp [::1]:54249->[::1]:5672: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:59.880159+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5673","err":"Exception (501) Reason: \"read tcp [::1]:54250->[::1]:5673: read: connection reset by peer\""}
+{"time":"2026-11-12T01:09:59.880662+04:00","level":"WARN","msg":"dial failed","component":"consumer","node":"localhost:5674","err":"dial tcp [::1]:5674: connect: connection refused"}
+{"time":"2026-11-12T01:09:59.880705+04:00","level":"WARN","msg":"all nodes unreachable, backing off","component":"consumer","backoff_ms":5000}
+{"time":"2026-11-12T01:10:00.501696+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":40,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:10:01.501828+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":41,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:10:02.50184+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":42,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:10:03.501844+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":43,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:10:04.501764+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":44,"unique":30548,"unique_per_s":0,"duplicates":1,"redelivered":12,"node":"localhost:5674"}
+{"time":"2026-11-12T01:10:04.888349+04:00","level":"INFO","msg":"connected","component":"consumer","node":"localhost:5672","attempt":10}
+{"time":"2026-11-12T01:10:04.893038+04:00","level":"INFO","msg":"consuming","component":"consumer","node":"localhost:5672","prefetch":100}
+{"time":"2026-11-12T01:10:05.500777+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":45,"unique":37430,"unique_per_s":6882,"duplicates":89,"redelivered":100,"node":"localhost:5672"}
+{"time":"2026-11-12T01:10:06.500641+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":46,"unique":55091,"unique_per_s":17661,"duplicates":89,"redelivered":100,"node":"localhost:5672"}
+{"time":"2026-11-12T01:10:07.500681+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":47,"unique":81650,"unique_per_s":26559,"duplicates":89,"redelivered":100,"node":"localhost:5672"}
+{"time":"2026-11-12T01:10:07.902838+04:00","level":"INFO","msg":"preferred node is back, switching back","component":"consumer","node":"localhost:5672","preferred":"localhost:5673"}
+{"time":"2026-11-12T01:10:07.905854+04:00","level":"INFO","msg":"drained prefetched deliveries before switch-back","component":"consumer","node":"localhost:5672","count":0}
+{"time":"2026-11-12T01:10:07.911307+04:00","level":"INFO","msg":"connected","component":"consumer","node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T01:10:07.916262+04:00","level":"INFO","msg":"consuming","component":"consumer","node":"localhost:5673","prefetch":100}
+{"time":"2026-11-12T01:10:08.500794+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":48,"unique":93792,"unique_per_s":12142,"duplicates":89,"redelivered":200,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:09.500834+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":49,"unique":95792,"unique_per_s":2000,"duplicates":89,"redelivered":200,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:10.500773+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":50,"unique":97792,"unique_per_s":2000,"duplicates":89,"redelivered":200,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:11.500756+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":51,"unique":99792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:12.500837+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":52,"unique":101789,"unique_per_s":1997,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:13.500785+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":53,"unique":103792,"unique_per_s":2003,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:14.5009+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":54,"unique":105792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:15.500803+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":55,"unique":107792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:16.500819+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":56,"unique":109792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:17.500841+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":57,"unique":111792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:18.500815+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":58,"unique":113789,"unique_per_s":1997,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:19.500873+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":59,"unique":115792,"unique_per_s":2003,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:20.500889+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":60,"unique":117792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:21.500858+04:00","level":"INFO","msg":"stats","component":"consumer","t_s":61,"unique":119792,"unique_per_s":2000,"duplicates":89,"redelivered":202,"node":"localhost:5673"}
+{"time":"2026-11-12T01:10:21.60415+04:00","level":"INFO","msg":"expected message count reached","component":"consumer","node":"localhost:5673","unique":120000}
+{"time":"2026-11-12T01:10:21.617433+04:00","level":"INFO","msg":"done","component":"consumer","summary":{"ack_errors":0,"acked":120089,"duplicates":89,"e2e_latency":{"count":120000,"min_ms":0.694,"avg_ms":578.512,"p50_ms":144.11,"p95_ms":1643.498,"p99_ms":1825.614,"p999_ms":1834.877,"max_ms":28019.767},"elapsed_s":61.110706541,"events":[{"t_s":0.005852666,"type":"connected","node":"localhost:5673"},{"t_s":16.073963208,"type":"failover","node":"localhost:5673","info":"delivery channel closed"},{"t_s":16.277960041,"type":"connected","node":"localhost:5674"},{"t_s":16.385585916,"type":"failover","node":"localhost:5674","info":"delivery channel closed"},{"t_s":44.388296333,"type":"connected","node":"localhost:5672"},{"t_s":47.402697208,"type":"switch_back","node":"localhost:5673","info":"from localhost:5672"},{"t_s":47.411171041,"type":"connected","node":"localhost:5673"}],"expected_producers":4,"failovers":2,"foreign":0,"gaps_seen":0,"missing_total":0,"out_of_order":0,"per_producer":{"quorum-loss-010920-p0":{"gaps_seen":0,"max_seq":30000,"missing_count":0,"missing_sample":null,"out_of_order":0,"unique":30000},"quorum-loss-010920-p1":{"gaps_seen":0,"max_seq":30000,"missing_count":0,"missing_sample":null,"out_of_order":0,"unique":30000},"quorum-loss-010920-p2":{"gaps_seen":0,"max_seq":30000,"missing_count":0,"missing_sample":null,"out_of_order":0,"unique":30000},"quorum-loss-010920-p3":{"gaps_seen":0,"max_seq":30000,"missing_count":0,"missing_sample":null,"out_of_order":0,"unique":30000}},"producers":4,"received":120089,"redelivered_flag":202,"run_id":"quorum-loss-010920","switch_backs":1,"unique":120000,"zero_loss":true}}

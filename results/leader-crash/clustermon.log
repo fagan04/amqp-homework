@@ -1,0 +1,2 @@
+{"time":"2026-11-11T23:59:30.813701+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"","to":"rabbit1","online_members":3}
+{"time":"2026-11-11T23:59:47.310162+04:00","level":"INFO","msg":"leader changed","component":"clustermon","from":"rabbit1","to":"rabbit3","online_members":2}

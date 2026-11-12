@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 12000,
+    "min_ms": 1.239,
+    "avg_ms": 2.803,
+    "p50_ms": 2.246,
+    "p95_ms": 6.041,
+    "p99_ms": 8.001,
+    "p999_ms": 9.123,
+    "max_ms": 10.555
+  },
+  "confirmed_total": 12000,
+  "count_per_worker": 12000,
+  "elapsed_s": 2.108624,
+  "expected_total": 12000,
+  "inflight": 16,
+  "nacked": 0,
+  "published_calls": 12000,
+  "reconnects": 0,
+  "republished": 0,
+  "returned": 0,
+  "run_id": "tp-1-16",
+  "size_bytes": 512,
+  "target_rate": 0,
+  "throughput_msg_s": 5690.915023256874,
+  "workers": 1
+}

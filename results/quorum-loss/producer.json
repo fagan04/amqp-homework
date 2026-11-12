@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 120000,
+    "min_ms": 0.687,
+    "avg_ms": 4.739,
+    "p50_ms": 4.229,
+    "p95_ms": 10.291,
+    "p99_ms": 12.545,
+    "p999_ms": 23.42,
+    "max_ms": 63.246
+  },
+  "confirmed_total": 120000,
+  "count_per_worker": 30000,
+  "elapsed_s": 60.000880292,
+  "expected_total": 120000,
+  "inflight": 100,
+  "nacked": 4,
+  "published_calls": 120097,
+  "reconnects": 5,
+  "republished": 97,
+  "returned": 0,
+  "run_id": "quorum-loss-010920",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.9706573638348,
+  "workers": 4
+}

@@ -1,0 +1,12 @@
+{"time":"2026-11-12T00:54:28.991954+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-128","node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:29.001589+04:00","level":"INFO","msg":"starting","component":"producer","run_id":"tp-4-128","workers":4,"count_per_worker":12000,"rate":0,"size":512,"inflight":128,"nodes":3}
+{"time":"2026-11-12T00:54:29.012783+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-128","worker":1,"node":"localhost:5673","attempt":1}
+{"time":"2026-11-12T00:54:29.013207+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-128","worker":0,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:29.014343+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-128","worker":3,"node":"localhost:5672","attempt":1}
+{"time":"2026-11-12T00:54:29.0176+04:00","level":"INFO","msg":"connected","component":"producer","run_id":"tp-4-128","worker":2,"node":"localhost:5674","attempt":1}
+{"time":"2026-11-12T00:54:30.00199+04:00","level":"INFO","msg":"stats","component":"producer","run_id":"tp-4-128","t_s":1,"confirmed":39938,"confirmed_per_s":39938,"republished":0,"reconnects":0}
+{"time":"2026-11-12T00:54:30.047158+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-128","worker":2,"confirmed":12000}
+{"time":"2026-11-12T00:54:30.192198+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-128","worker":1,"confirmed":12000}
+{"time":"2026-11-12T00:54:30.204363+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-128","worker":3,"confirmed":12000}
+{"time":"2026-11-12T00:54:30.204589+04:00","level":"INFO","msg":"worker finished","component":"producer","run_id":"tp-4-128","worker":0,"confirmed":12000}
+{"time":"2026-11-12T00:54:30.20877+04:00","level":"INFO","msg":"done","component":"producer","run_id":"tp-4-128","summary":{"all_confirmed":true,"confirm_latency":{"count":48000,"min_ms":4.205,"avg_ms":12.166,"p50_ms":10.768,"p95_ms":20.338,"p99_ms":48.444,"p999_ms":75.711,"max_ms":82.689},"confirmed_total":48000,"count_per_worker":12000,"elapsed_s":1.202928042,"expected_total":48000,"inflight":128,"nacked":0,"published_calls":48000,"reconnects":0,"republished":0,"returned":0,"run_id":"tp-4-128","size_bytes":512,"target_rate":0,"throughput_msg_s":39902.63617115013,"workers":4}}

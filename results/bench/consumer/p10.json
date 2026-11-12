@@ -1,0 +1,70 @@
+{
+  "ack_errors": 0,
+  "acked": 40000,
+  "duplicates": 0,
+  "e2e_latency": {
+    "count": 40000,
+    "min_ms": 1338.588,
+    "avg_ms": 4834.577,
+    "p50_ms": 4939.006,
+    "p95_ms": 7433.221,
+    "p99_ms": 7652.167,
+    "p999_ms": 7690.309,
+    "max_ms": 7693.898
+  },
+  "elapsed_s": 7.668578625,
+  "events": [
+    {
+      "t_s": 0.007301292,
+      "type": "connected",
+      "node": "localhost:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 0,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "cons-10-p0": {
+      "gaps_seen": 0,
+      "max_seq": 10000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 10000
+    },
+    "cons-10-p1": {
+      "gaps_seen": 0,
+      "max_seq": 10000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 10000
+    },
+    "cons-10-p2": {
+      "gaps_seen": 0,
+      "max_seq": 10000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 10000
+    },
+    "cons-10-p3": {
+      "gaps_seen": 0,
+      "max_seq": 10000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 10000
+    }
+  },
+  "producers": 4,
+  "received": 40000,
+  "redelivered_flag": 0,
+  "run_id": "cons-10",
+  "switch_backs": 0,
+  "unique": 40000,
+  "zero_loss": true
+}

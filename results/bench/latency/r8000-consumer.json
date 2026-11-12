@@ -1,0 +1,70 @@
+{
+  "ack_errors": 0,
+  "acked": 160000,
+  "duplicates": 0,
+  "e2e_latency": {
+    "count": 160000,
+    "min_ms": 2.035,
+    "avg_ms": 14.158,
+    "p50_ms": 4.73,
+    "p95_ms": 71.91,
+    "p99_ms": 216.978,
+    "p999_ms": 254.907,
+    "max_ms": 262.706
+  },
+  "elapsed_s": 21.049359375,
+  "events": [
+    {
+      "t_s": 0.004901333,
+      "type": "connected",
+      "node": "localhost:5672"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 0,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "lat-8000-p0": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p1": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p2": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "lat-8000-p3": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    }
+  },
+  "producers": 4,
+  "received": 160000,
+  "redelivered_flag": 0,
+  "run_id": "lat-8000",
+  "switch_backs": 0,
+  "unique": 160000,
+  "zero_loss": true
+}

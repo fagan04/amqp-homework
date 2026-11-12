@@ -1,0 +1,103 @@
+{
+  "ack_errors": 0,
+  "acked": 120089,
+  "duplicates": 89,
+  "e2e_latency": {
+    "count": 120000,
+    "min_ms": 0.694,
+    "avg_ms": 578.512,
+    "p50_ms": 144.11,
+    "p95_ms": 1643.498,
+    "p99_ms": 1825.614,
+    "p999_ms": 1834.877,
+    "max_ms": 28019.767
+  },
+  "elapsed_s": 61.110706541,
+  "events": [
+    {
+      "t_s": 0.005852666,
+      "type": "connected",
+      "node": "localhost:5673"
+    },
+    {
+      "t_s": 16.073963208,
+      "type": "failover",
+      "node": "localhost:5673",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 16.277960041,
+      "type": "connected",
+      "node": "localhost:5674"
+    },
+    {
+      "t_s": 16.385585916,
+      "type": "failover",
+      "node": "localhost:5674",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 44.388296333,
+      "type": "connected",
+      "node": "localhost:5672"
+    },
+    {
+      "t_s": 47.402697208,
+      "type": "switch_back",
+      "node": "localhost:5673",
+      "info": "from localhost:5672"
+    },
+    {
+      "t_s": 47.411171041,
+      "type": "connected",
+      "node": "localhost:5673"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 2,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "quorum-loss-010920-p0": {
+      "gaps_seen": 0,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 30000
+    },
+    "quorum-loss-010920-p1": {
+      "gaps_seen": 0,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 30000
+    },
+    "quorum-loss-010920-p2": {
+      "gaps_seen": 0,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 30000
+    },
+    "quorum-loss-010920-p3": {
+      "gaps_seen": 0,
+      "max_seq": 30000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 30000
+    }
+  },
+  "producers": 4,
+  "received": 120089,
+  "redelivered_flag": 202,
+  "run_id": "quorum-loss-010920",
+  "switch_backs": 1,
+  "unique": 120000,
+  "zero_loss": true
+}

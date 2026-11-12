@@ -1,0 +1,28 @@
+{
+  "all_confirmed": true,
+  "confirm_latency": {
+    "count": 160000,
+    "min_ms": 0.661,
+    "avg_ms": 1.843,
+    "p50_ms": 1.49,
+    "p95_ms": 3.04,
+    "p99_ms": 8.708,
+    "p999_ms": 52.447,
+    "max_ms": 86.407
+  },
+  "confirmed_total": 160000,
+  "count_per_worker": 40000,
+  "elapsed_s": 80.0004955,
+  "expected_total": 160000,
+  "inflight": 100,
+  "nacked": 7,
+  "published_calls": 160016,
+  "reconnects": 9,
+  "republished": 16,
+  "returned": 0,
+  "run_id": "rolling-restart-011022",
+  "size_bytes": 512,
+  "target_rate": 2000,
+  "throughput_msg_s": 1999.9876125767246,
+  "workers": 4
+}

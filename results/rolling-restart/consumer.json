@@ -1,0 +1,92 @@
+{
+  "ack_errors": 0,
+  "acked": 160010,
+  "duplicates": 10,
+  "e2e_latency": {
+    "count": 160000,
+    "min_ms": 0.675,
+    "avg_ms": 226.714,
+    "p50_ms": 1.613,
+    "p95_ms": 2077.887,
+    "p99_ms": 5010.82,
+    "p999_ms": 5657.845,
+    "max_ms": 5703.027
+  },
+  "elapsed_s": 81.082621125,
+  "events": [
+    {
+      "t_s": 0.007967458,
+      "type": "connected",
+      "node": "localhost:5673"
+    },
+    {
+      "t_s": 32.809096458,
+      "type": "failover",
+      "node": "localhost:5673",
+      "info": "delivery channel closed"
+    },
+    {
+      "t_s": 33.012864458,
+      "type": "connected",
+      "node": "localhost:5674"
+    },
+    {
+      "t_s": 39.052080291,
+      "type": "switch_back",
+      "node": "localhost:5673",
+      "info": "from localhost:5674"
+    },
+    {
+      "t_s": 39.060958083,
+      "type": "connected",
+      "node": "localhost:5673"
+    }
+  ],
+  "expected_producers": 4,
+  "failovers": 1,
+  "foreign": 0,
+  "gaps_seen": 0,
+  "missing_total": 0,
+  "out_of_order": 0,
+  "per_producer": {
+    "rolling-restart-011022-p0": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-011022-p1": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-011022-p2": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    },
+    "rolling-restart-011022-p3": {
+      "gaps_seen": 0,
+      "max_seq": 40000,
+      "missing_count": 0,
+      "missing_sample": null,
+      "out_of_order": 0,
+      "unique": 40000
+    }
+  },
+  "producers": 4,
+  "received": 160010,
+  "redelivered_flag": 8,
+  "run_id": "rolling-restart-011022",
+  "switch_backs": 1,
+  "unique": 160000,
+  "zero_loss": true
+}
